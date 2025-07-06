@@ -175,5 +175,7 @@ Network_Status_t networkStatus = NO_NETWORK;
  }Menu_Items;
 
 
+DCCEXProtocol dccexProtocol;
+
 
 #endif //VARS_H

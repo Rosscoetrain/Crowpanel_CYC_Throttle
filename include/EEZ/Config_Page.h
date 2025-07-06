@@ -22,7 +22,7 @@
 
 */
 
-//#include "Config_Page.h"
+#include "functions.h"
 
 void action_config_button(lv_event_t * e)
 {
@@ -35,13 +35,13 @@ void action_config_button(lv_event_t * e)
 
     case (28):              //Reload Local Roster
       lv_label_set_text(objects.lbl_roster, "Restoring Local Roster");
-//      setupLocalRoster();
+      setupLocalRoster();
       lv_label_set_text(objects.lbl_roster, "Local Roster Restored");
       break;
 
     case (29):              //Retrieve EX-Rail Roster
     {
-//      dccexProtocol.disconnect();
+      dccexProtocol.disconnect();
       //First Clear the Roster
       for(int i = 0; i < NUM_LOCOS; i++)
       {
@@ -56,9 +56,9 @@ void action_config_button(lv_event_t * e)
           strcpy(funcName[i][f], " ");
         }
       }
-//      dccexProtocol.connect(&client);
+      dccexProtocol.connect(&client);
       lv_label_set_text(objects.lbl_roster,"Sending List Request");
-//      dccexProtocol.getLists(true,false,false,false);
+      dccexProtocol.getLists(true,false,false,false);
       Serial.println("List Request Sent");
       break;
     }

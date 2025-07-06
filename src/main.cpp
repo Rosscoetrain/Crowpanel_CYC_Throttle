@@ -41,6 +41,7 @@
 
 #include <WiFi.h>
 
+#include <DCCEXProtocol.h>
 
 
 /*
