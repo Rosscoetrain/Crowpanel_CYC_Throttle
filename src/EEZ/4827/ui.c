@@ -1,6 +1,6 @@
-#include "defines.h"
+#include "../../defines.h"
 
-#ifdef RES8048
+#ifdef RES4827
 
 #if defined(EEZ_FOR_LVGL)
 #include <eez/core/vars.h>
@@ -31,8 +31,6 @@ void ui_tick() {
 
 #else
 
-#include <string.h>
-
 static int16_t currentScreen = -1;
 
 static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
@@ -42,13 +40,19 @@ static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
     return ((lv_obj_t **)&objects)[index];
 }
 
+static const void *getLvglImageByName(const char *name) {
+    for (size_t imageIndex = 0; imageIndex < sizeof(images) / sizeof(ext_img_desc_t); imageIndex++) {
+        if (strcmp(images[imageIndex].name, name) == 0) {
+            return images[imageIndex].img_dsc;
+        }
+    }
+    return 0;
+}
+
 void loadScreen(enum ScreensEnum screenId) {
     currentScreen = screenId - 1;
     lv_obj_t *screen = getLvglObjectFromIndex(currentScreen);
-//    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
-//    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_ON, 200, 0, false);
-    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_NONE, 200, 200, false);
-//    lv_scr_load(screen);
+    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
 }
 
 void ui_init() {
@@ -62,5 +66,4 @@ void ui_tick() {
 
 #endif
 
-#endif // RES8048
-
+#endif // RES4827
