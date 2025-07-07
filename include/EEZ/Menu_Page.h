@@ -113,7 +113,7 @@ void action_menu_button(lv_event_t * e)
   {
     switch(pressedButton)
     {
-#ifdef ESP3202170A_LS
+#ifdef ESP32DIS02170A_LS
       case 28:
         saveLittleFS();
         break;
