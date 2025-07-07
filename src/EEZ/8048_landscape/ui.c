@@ -1,6 +1,6 @@
 #include "defines.h"
 
-#ifdef RES8048
+#ifdef RES8048_LS
 
 #if defined(EEZ_FOR_LVGL)
 #include <eez/core/vars.h>
@@ -45,10 +45,7 @@ static lv_obj_t *getLvglObjectFromIndex(int32_t index) {
 void loadScreen(enum ScreensEnum screenId) {
     currentScreen = screenId - 1;
     lv_obj_t *screen = getLvglObjectFromIndex(currentScreen);
-//    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
-//    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_ON, 200, 0, false);
-    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_NONE, 200, 200, false);
-//    lv_scr_load(screen);
+    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);
 }
 
 void ui_init() {

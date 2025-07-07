@@ -10,13 +10,15 @@
 //#include "FS.h"
 
 #ifdef EEZ
+
 #ifdef RES8048
-
 #include "EEZ/8048/screens.h"
+#endif
+#ifdef RES8048_LS
+#include "EEZ/8048_landscape/screens.h"
+#endif
 
 #endif
-#endif
-
 
 
 //  char* dd_locos;

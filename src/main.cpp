@@ -24,10 +24,11 @@
 
 
 #ifdef ESP32DIS02170A            // Elecrow DIS02170A 7in 800x480 advanced
-//#include "pins_config.h"
 #include "Display_Drivers/Elecrow_DIS02170A_C.h"
+#elif ESP32DIS02170A_LS
+#include "Display_Drivers/Elecrow_DIS02170A_landscape_C.h"
 #elif ESP32DIS0604R              // Elecrow DIS0604A 4.3in 320x240
-//#include "Display_Drivers/DIS0604R_LovyanGFX.h"
+//#include "Display_Drivers/DIS0604R_LovyanGFX_R.h"
 #elif ESP32DIS08070H             // Elecrow DIS08070A 7in 800x480 basic
 #include "Display_Drivers/Elecrow_DIS08070H_C.h"
 #endif
@@ -66,6 +67,13 @@
 #include "EEZ/8048/ui.h"
 #include "EEZ/8048/screens.h"
 #include "EEZ/8048/images.h"
+#endif
+
+#ifdef RES8048_LS
+#include "EEZ/8048_landscape/actions.h"
+#include "EEZ/8048_landscape/ui.h"
+#include "EEZ/8048_landscape/screens.h"
+#include "EEZ/8048_landscape/images.h"
 #endif
 
 
@@ -153,11 +161,14 @@ void setup()
    }
 
   gfx.initDMA();
+
 #ifdef EEZ
+#ifndef ESP32DIS02170A_LS
   gfx.setRotation(1);
 #endif
-  gfx.startWrite();
+#endif
 
+  gfx.startWrite();
   gfx.fillScreen(TFT_BLACK);
 
 //  gfx.fillScreen(TFT_BLUE);

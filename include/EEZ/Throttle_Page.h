@@ -186,12 +186,12 @@ void action_throttle_button(lv_event_t * e)
       {
         lv_btnmatrix_set_btn_ctrl(objects.function_mtx, func_xlate[i], LV_BTNMATRIX_CTRL_HIDDEN);        
       }
-
-#if defined ( ESP32DIS02170A ) || defined ( ESP32DIS08070H )
       gfx.flush();
-#else
-      gfx.flush(true);
-#endif
+
+//#if defined ( ESP32DIS02170A ) || defined ( ESP32DIS08070H ) || defined ( ESP3202170A_LS )
+//#else
+//      gfx.flush(true);
+//#endif
       break;
     case 2:       //Guest Loco
 //      Serial.println("Guest InActive");

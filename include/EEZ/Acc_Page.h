@@ -24,11 +24,15 @@
 */
 #ifdef EEZ
 #ifdef RES8048
-
 #include "8048/ui.h"
 #include "8048/screens.h"
-
 #endif
+
+#ifdef RES8048_LS
+#include "8048_landscape/ui.h"
+#include "8048_landscape/screens.h"
+#endif
+
 #endif
 
 void action_accessories_button(lv_event_t * e)

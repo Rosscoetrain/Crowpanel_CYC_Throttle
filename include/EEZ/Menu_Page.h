@@ -89,12 +89,14 @@ static void menu_cb(lv_event_t * e)
       case ROUTES:
 //        loadScreen(SCREEN_ID_ROUTES);  
         break;
-      case SAVE:
+#ifndef ESP3202170A_LS
+        case SAVE:
         saveLittleFS();
         break;
       case RESTORE:
         restoreLittleFS();
         break;
+#endif
       default:
         break;
     }
@@ -111,6 +113,14 @@ void action_menu_button(lv_event_t * e)
   {
     switch(pressedButton)
     {
+#ifdef ESP3202170A_LS
+      case 28:
+        saveLittleFS();
+        break;
+      case 29:
+        restoreLittleFS();
+        break;
+#endif
       case 30:       //Credits
         loadScreen(SCREEN_ID_CREDITS);  
         break;

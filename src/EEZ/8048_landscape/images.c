@@ -1,6 +1,6 @@
 #include "defines.h"
 
-#ifdef RES8048
+#ifdef RES8048_LS
 
 #include "images.h"
 
