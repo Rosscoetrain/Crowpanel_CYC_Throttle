@@ -877,7 +877,7 @@ void create_screen_throttle() {
     lv_obj_t *obj = lv_obj_create(0);
     objects.throttle = obj;
     lv_obj_set_pos(obj, 0, 0);
-    lv_obj_set_size(obj, 480, 800);
+    lv_obj_set_size(obj, 800, 480);
     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffc89600), LV_PART_MAIN | LV_STATE_DEFAULT);
     {
         lv_obj_t *parent_obj = obj;
@@ -885,7 +885,7 @@ void create_screen_throttle() {
             // CreditsButton_1
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.credits_button_1 = obj;
-            lv_obj_set_pos(obj, 11, 711);
+            lv_obj_set_pos(obj, 637, 14);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)30);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -929,7 +929,7 @@ void create_screen_throttle() {
             // TipsButton_1
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.tips_button_1 = obj;
-            lv_obj_set_pos(obj, 168, 711);
+            lv_obj_set_pos(obj, 637, 108);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)31);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -973,7 +973,7 @@ void create_screen_throttle() {
             // InfoButton_1
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.info_button_1 = obj;
-            lv_obj_set_pos(obj, 325, 711);
+            lv_obj_set_pos(obj, 637, 200);
             lv_obj_set_size(obj, 145, 80);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)32);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SNAPPABLE);
@@ -1029,7 +1029,7 @@ void create_screen_throttle() {
             // swDir
             lv_obj_t *obj = lv_switch_create(parent_obj);
             objects.sw_dir = obj;
-            lv_obj_set_pos(obj, 200, 640);
+            lv_obj_set_pos(obj, 220, 294);
             lv_obj_set_size(obj, 80, 36);
             lv_obj_add_event_cb(obj, event_handler_checked_cb_throttle_sw_dir, LV_EVENT_VALUE_CHANGED, (void *)4);
             lv_obj_add_event_cb(obj, event_handler_unchecked_cb_throttle_sw_dir, LV_EVENT_VALUE_CHANGED, (void *)5);
@@ -1100,7 +1100,7 @@ void create_screen_throttle() {
             // btnEdit
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.btn_edit = obj;
-            lv_obj_set_pos(obj, 367, 630);
+            lv_obj_set_pos(obj, 682, 294);
             lv_obj_set_size(obj, 100, 60);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)29);
             lv_obj_set_style_border_width(obj, 1, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1676,46 +1676,44 @@ void create_screen_throttle() {
             // Function_Mtx
             lv_obj_t *obj = lv_btnmatrix_create(parent_obj);
             objects.function_mtx = obj;
-            lv_obj_set_pos(obj, -1, 223);
-            lv_obj_set_size(obj, 480, 395);
-            static const char *map[15] = {
+            lv_obj_set_pos(obj, 7, 349);
+            lv_obj_set_size(obj, 600, 120);
+            static const char *map[12] = {
                 " ",
                 " ",
-                "\n",
                 " ",
-                " ",
-                "\n",
                 " ",
                 " ",
                 "\n",
                 " ",
                 " ",
-                "\n",
+                " ",
                 " ",
                 " ",
                 NULL,
             };
             static lv_btnmatrix_ctrl_t ctrl_map[10] = {
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_HIDDEN | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
             };
             lv_btnmatrix_set_map(obj, map);
             lv_btnmatrix_set_ctrl_map(obj, ctrl_map);
             lv_obj_set_style_pad_top(obj, 9, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_pad_bottom(obj, 9, LV_PART_MAIN | LV_STATE_DEFAULT);
-            lv_obj_set_style_pad_left(obj, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
-            lv_obj_set_style_pad_right(obj, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
-            lv_obj_set_style_pad_column(obj, 160, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_left(obj, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_right(obj, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_column(obj, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xffc89600), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_border_width(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_row(obj, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xffffffff), LV_PART_ITEMS | LV_STATE_DEFAULT);
             lv_obj_set_style_bg_grad_dir(obj, LV_GRAD_DIR_VER, LV_PART_ITEMS | LV_STATE_DEFAULT);
             lv_obj_set_style_bg_grad_color(obj, lv_color_hex(0xff000000), LV_PART_ITEMS | LV_STATE_DEFAULT);
@@ -1728,7 +1726,7 @@ void create_screen_throttle() {
             lv_obj_set_style_shadow_spread(obj, 2, LV_PART_ITEMS | LV_STATE_DEFAULT);
             lv_obj_set_style_shadow_color(obj, lv_color_hex(0xff000000), LV_PART_ITEMS | LV_STATE_DEFAULT);
             lv_obj_set_style_shadow_opa(obj, 127, LV_PART_ITEMS | LV_STATE_DEFAULT);
-            lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_ITEMS | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(obj, &lv_font_montserrat_16, LV_PART_ITEMS | LV_STATE_DEFAULT);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xffffff00), LV_PART_ITEMS | LV_STATE_CHECKED);
             lv_obj_set_style_shadow_width(obj, 0, LV_PART_ITEMS | LV_STATE_CHECKED);
             lv_obj_set_style_shadow_ofs_x(obj, 0, LV_PART_ITEMS | LV_STATE_CHECKED);
@@ -1748,8 +1746,8 @@ void create_screen_throttle() {
             // Slider
             lv_obj_t *obj = lv_slider_create(parent_obj);
             objects.slider = obj;
-            lv_obj_set_pos(obj, 222, 235);
-            lv_obj_set_size(obj, 30, 333);
+            lv_obj_set_pos(obj, 41, 237);
+            lv_obj_set_size(obj, 460, 30);
             lv_slider_set_range(obj, 0, 126);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_RELEASED, (void *)3);
             lv_obj_set_scroll_dir(obj, LV_DIR_NONE);
@@ -1797,8 +1795,8 @@ void create_screen_throttle() {
             // ta_guest_address
             lv_obj_t *obj = lv_textarea_create(parent_obj);
             objects.ta_guest_address = obj;
-            lv_obj_set_pos(obj, 11, 630);
-            lv_obj_set_size(obj, 100, 60);
+            lv_obj_set_pos(obj, 683, 365);
+            lv_obj_set_size(obj, 100, 61);
             lv_textarea_set_max_length(obj, 128);
             lv_textarea_set_placeholder_text(obj, "Guest");
             lv_textarea_set_one_line(obj, true);
@@ -1836,7 +1834,7 @@ void create_screen_throttle() {
             // kbd_guest
             lv_obj_t *obj = lv_keyboard_create(parent_obj);
             objects.kbd_guest = obj;
-            lv_obj_set_pos(obj, 8, 250);
+            lv_obj_set_pos(obj, 36, 284);
             lv_obj_set_size(obj, 465, 189);
             lv_keyboard_set_mode(obj, LV_KEYBOARD_MODE_NUMBER);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
@@ -1855,7 +1853,7 @@ void create_screen_throttle() {
         {
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.obj12 = obj;
-            lv_obj_set_pos(obj, 126, 630);
+            lv_obj_set_pos(obj, 146, 284);
             lv_obj_set_size(obj, 60, 60);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_CLICKED, (void *)7);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1890,7 +1888,7 @@ void create_screen_throttle() {
         {
             lv_obj_t *obj = lv_btn_create(parent_obj);
             objects.obj13 = obj;
-            lv_obj_set_pos(obj, 296, 630);
+            lv_obj_set_pos(obj, 316, 284);
             lv_obj_set_size(obj, 60, 60);
             lv_obj_add_event_cb(obj, action_throttle_button, LV_EVENT_CLICKED, (void *)6);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);

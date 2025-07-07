@@ -8,8 +8,16 @@
       "projectVersion": "v3",
       "projectType": "lvgl",
       "lvglVersion": "8.3",
-      "extensions": [],
-      "imports": [],
+      "extensions": [
+        {
+          "objID": "795ee697-7798-495d-bc2f-9b4d25a7f431"
+        }
+      ],
+      "imports": [
+        {
+          "objID": "15c58618-1a2c-4f13-bcc7-f2232c92b278"
+        }
+      ],
       "flowSupport": false,
       "displayWidth": 800,
       "displayHeight": 480,
@@ -1808,8 +1816,8 @@
             {
               "objID": "d15f80dd-b3e0-47dd-a12f-45106c462bf9",
               "type": "LVGLButtonWidget",
-              "left": 11,
-              "top": 710.5,
+              "left": 637,
+              "top": 14,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -1935,8 +1943,8 @@
             {
               "objID": "bfe23f06-7a82-49f1-e7bb-ab4624d1c557",
               "type": "LVGLButtonWidget",
-              "left": 168,
-              "top": 710.5,
+              "left": 637,
+              "top": 108,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -2062,8 +2070,8 @@
             {
               "objID": "bb43af97-c471-4887-cfe4-d9596ba2a0b4",
               "type": "LVGLButtonWidget",
-              "left": 325,
-              "top": 710.5,
+              "left": 637,
+              "top": 200,
               "width": 145,
               "height": 80,
               "customInputs": [],
@@ -2239,8 +2247,8 @@
             {
               "objID": "1d93909b-d958-4d4f-8af3-e0bac2ea94a8",
               "type": "LVGLSwitchWidget",
-              "left": 200,
-              "top": 640,
+              "left": 220,
+              "top": 294,
               "width": 80,
               "height": 36,
               "customInputs": [],
@@ -2462,8 +2470,8 @@
             {
               "objID": "f2417a16-f203-4e4c-b597-9e522da3154a",
               "type": "LVGLButtonWidget",
-              "left": 367,
-              "top": 630,
+              "left": 682,
+              "top": 294,
               "width": 100,
               "height": 60,
               "customInputs": [],
@@ -4160,10 +4168,10 @@
             {
               "objID": "57b74f45-a51d-4fe2-ff4e-04d296f37910",
               "type": "LVGLButtonMatrixWidget",
-              "left": -1,
-              "top": 223,
-              "width": 480,
-              "height": 395,
+              "left": 7,
+              "top": 349,
+              "width": 600,
+              "height": 120,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -4198,11 +4206,12 @@
                     "DEFAULT": {
                       "pad_top": 9,
                       "pad_bottom": 9,
-                      "pad_left": 5,
-                      "pad_right": 5,
-                      "pad_column": 160,
+                      "pad_left": 10,
+                      "pad_right": 10,
+                      "pad_column": 10,
                       "bg_color": "#c89600",
-                      "border_width": 0
+                      "border_width": 0,
+                      "pad_row": 10
                     }
                   },
                   "ITEMS": {
@@ -4219,7 +4228,7 @@
                       "shadow_spread": 2,
                       "shadow_color": "#0",
                       "shadow_opa": 127,
-                      "text_font": "MONTSERRAT_24"
+                      "text_font": "MONTSERRAT_16"
                     },
                     "CHECKED": {
                       "bg_color": "#ffff00",
@@ -4249,61 +4258,41 @@
                   "objID": "fc558ae8-a178-4ac7-f834-89efae04fccd",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true
-                },
-                {
-                  "objID": "0e56e576-42b8-43c2-da81-586198fcb924",
-                  "newLine": false,
-                  "text": "",
-                  "width": 1,
-                  "ctrlHidden": true,
-                  "ctrlCheckable": true
-                },
-                {
-                  "objID": "231a44b6-dd88-43bd-c42a-77c7b91211fa",
-                  "newLine": true,
-                  "text": "Btn",
-                  "width": 1
                 },
                 {
                   "objID": "35a2d1b3-23c0-4608-aba8-5211d8c61450",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true
                 },
                 {
                   "objID": "c0ab9027-eebc-4f0e-a938-3cab0fab93d7",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true,
                   "ctrlChecked": false
-                },
-                {
-                  "objID": "316e8edc-be5a-4d54-e658-f65936b095ac",
-                  "newLine": true,
-                  "text": "Btn",
-                  "width": 1
                 },
                 {
                   "objID": "d6b31e58-ed40-413c-f51a-5c1bc3141524",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true
                 },
                 {
                   "objID": "7083089c-f1cc-4fe6-c9c9-92af5a5c39c0",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true,
                   "ctrlChecked": false
                 },
                 {
-                  "objID": "be186f89-4d27-493c-9b42-5d8a26a93e37",
+                  "objID": "21998a3c-9685-4a6a-a8d8-9317cfd6ec6b",
                   "newLine": true,
                   "text": "Btn",
                   "width": 1
@@ -4312,34 +4301,34 @@
                   "objID": "40fdbb08-9841-4925-ff5e-c220ed0094d7",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true
                 },
                 {
                   "objID": "e6be2129-4bde-4b5c-cd3a-1657ec6d9174",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true
-                },
-                {
-                  "objID": "f5df6ee7-1277-47e1-9001-f5a89211b85d",
-                  "newLine": true,
-                  "text": "Btn",
-                  "width": 1
                 },
                 {
                   "objID": "2e9eb78f-6295-4aa2-bf02-1762b5fc46c2",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
                   "ctrlCheckable": true
                 },
                 {
                   "objID": "fa25b820-3951-4d07-f1ce-4999ae6e217c",
                   "text": "",
                   "width": 1,
-                  "ctrlHidden": true,
+                  "ctrlHidden": false,
+                  "ctrlCheckable": true
+                },
+                {
+                  "objID": "c531f243-abd5-41a0-c995-4f0f56930f29",
+                  "text": "",
+                  "width": 1,
                   "ctrlCheckable": true
                 }
               ],
@@ -4348,10 +4337,10 @@
             {
               "objID": "6fcd28d6-189c-4adb-9970-f4bc821d5918",
               "type": "LVGLSliderWidget",
-              "left": 222,
-              "top": 235,
-              "width": 30,
-              "height": 333,
+              "left": 41,
+              "top": 237,
+              "width": 460,
+              "height": 30,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -4501,10 +4490,10 @@
             {
               "objID": "543ceb26-56be-4b9f-ed21-67ff88215f9e",
               "type": "LVGLTextareaWidget",
-              "left": 11,
-              "top": 630,
+              "left": 683,
+              "top": 365,
               "width": 100,
-              "height": 60,
+              "height": 61,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -4596,8 +4585,8 @@
             {
               "objID": "5c553654-d30a-4b91-f3fd-833e343c50ae",
               "type": "LVGLKeyboardWidget",
-              "left": 8,
-              "top": 250,
+              "left": 36,
+              "top": 284,
               "width": 465,
               "height": 189,
               "customInputs": [],
@@ -4697,8 +4686,8 @@
             {
               "objID": "c957cdb6-1943-49c3-b9e6-c036e12afe1a",
               "type": "LVGLButtonWidget",
-              "left": 126,
-              "top": 630,
+              "left": 146,
+              "top": 284,
               "width": 60,
               "height": 60,
               "customInputs": [],
@@ -4820,8 +4809,8 @@
             {
               "objID": "664084ba-f2b1-4734-e92d-4707d0eda35c",
               "type": "LVGLButtonWidget",
-              "left": 296,
-              "top": 630,
+              "left": 316,
+              "top": 284,
               "width": 60,
               "height": 60,
               "customInputs": [],
@@ -4967,8 +4956,8 @@
       "name": "Throttle",
       "left": 0,
       "top": 0,
-      "width": 480,
-      "height": 800,
+      "width": 800,
+      "height": 480,
       "isUsedAsUserWidget": false,
       "createAtStart": true,
       "deleteOnScreenUnload": false
