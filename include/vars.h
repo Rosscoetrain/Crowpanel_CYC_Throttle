@@ -10,7 +10,6 @@
 //#include "FS.h"
 
 #ifdef EEZ
-
 #ifdef RES8048
 #include "EEZ/8048/screens.h"
 #endif
@@ -165,7 +164,13 @@ typedef enum {
 } Network_Status_t;
 
 Network_Status_t networkStatus = NO_NETWORK;
- typedef enum {
+
+/*
+ * The Menu_Items need to be in order as they are in the EEZ button matrix.
+ */
+
+#ifndef ESP32DIS02170A_LS
+typedef enum {
   CONFIG,
   ROSTER,
   ACC,
@@ -175,7 +180,20 @@ Network_Status_t networkStatus = NO_NETWORK;
   SAVE,
   RESTORE
  }Menu_Items;
+#else
+typedef enum {
+  ROSTER = 0,
+  ACC = 1,
+  ROUTES = 2,
+  PROGRAM = 3,
+  CONFIG = 4,
+  WIFI = 5,
+ }Menu_Items;
 
+ //  SAVE,
+//  RESTORE
+
+ #endif
 
 DCCEXProtocol dccexProtocol;
 

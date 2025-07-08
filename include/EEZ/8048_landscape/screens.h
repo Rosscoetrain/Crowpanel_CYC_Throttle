@@ -229,6 +229,7 @@ typedef struct _objects_t {
 
 extern objects_t objects;
 
+
 enum ScreensEnum {
     SCREEN_ID_MAIN = 1,
     SCREEN_ID_THROTTLE = 2,

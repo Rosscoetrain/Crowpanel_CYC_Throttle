@@ -40,7 +40,6 @@
 
 */
 
-//#include "Menu_Page.h"
 
 static void menu_cb(lv_event_t * e)
 {
@@ -58,18 +57,18 @@ static void menu_cb(lv_event_t * e)
         lv_textarea_set_text(objects.ta_tft_backlight, str);
         itoa(timeout, str, 10);
         lv_textarea_set_text(objects.ta_wifi_timeout, str);
-        loadScreen(SCREEN_ID_CONFIG);  
+        loadScreen(SCREEN_ID_CONFIG);
         break;
       case ROSTER:
         callingPage = SCREEN_ID_MAIN;
-        loadScreen(SCREEN_ID_ROSTER);  
+        loadScreen(SCREEN_ID_ROSTER);
         break;
       case ACC:
-        loadScreen(SCREEN_ID_ACCESSORIES);  
+        loadScreen(SCREEN_ID_ACCESSORIES);
         break;
       case PROGRAM:
         callingPage = SCREEN_ID_MAIN;
-        loadScreen(SCREEN_ID_PROGRAM);  
+        loadScreen(SCREEN_ID_PROGRAM);
         break;
       case WIFI:
         ssidList = netwks[0].ssid;
@@ -84,12 +83,12 @@ static void menu_cb(lv_event_t * e)
         lv_textarea_set_text(objects.ta_password, netwks[activeIndex].password.c_str());
         lv_textarea_set_text(objects.ta_ip_address , netwks[activeIndex].ipAddress.c_str());
         lv_textarea_set_text(objects.ta_port, netwks[activeIndex].nwPort.c_str());
-        loadScreen(SCREEN_ID_WI_FI);  
+        loadScreen(SCREEN_ID_WI_FI);
         break;
       case ROUTES:
-//        loadScreen(SCREEN_ID_ROUTES);  
+//        loadScreen(SCREEN_ID_ROUTES);
         break;
-#ifndef ESP3202170A_LS
+#ifndef ESP32DIS02170A_LS
         case SAVE:
         saveLittleFS();
         break;

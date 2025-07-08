@@ -1,7 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/0",
-    "selectedBitmapObject": "[CYC-8048.eez-project]:/bitmaps/0",
+    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/0",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -72,7 +71,7 @@
           {
             "type": "border",
             "selected": 0,
-            "size": 75.5,
+            "size": 55.5,
             "location": "bottom",
             "children": [
               {
@@ -119,12 +118,12 @@
             {
               "type": "row",
               "id": "#292fc551-6db1-4978-8868-ca8f753fe0b5",
-              "weight": 15,
+              "weight": 13.503620802665132,
               "children": [
                 {
                   "type": "tabset",
                   "id": "#1820a461-8e2f-4258-b61c-3629640ea4a6",
-                  "weight": 1,
+                  "weight": 1.2936802973977695,
                   "enableClose": false,
                   "children": [
                     {
@@ -156,7 +155,7 @@
                 {
                   "type": "tabset",
                   "id": "#ef0592f9-bc36-4d33-9070-6890c07f67ef",
-                  "weight": 1,
+                  "weight": 0.7063197026022305,
                   "enableClose": false,
                   "children": [
                     {
@@ -190,39 +189,28 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 53.8599487617421,
+              "weight": 63.84889453964303,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
                 {
                   "type": "tab",
-                  "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
+                  "id": "#e5705479-239e-4456-983d-50fd172f449a",
                   "name": "Main",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/0",
+                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/0",
                     "permanent": false
                   },
                   "icon": "svg:page"
-                },
-                {
-                  "type": "tab",
-                  "id": "#ea342305-9a75-4f08-a34f-26474f3011af",
-                  "name": "Settings",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/settings",
-                    "subObjectPath": "[CYC-8048.eez-project]:/settings",
-                    "permanent": false
-                  },
-                  "icon": "material:settings"
                 }
-              ]
+              ],
+              "active": true
             },
             {
               "type": "row",
               "id": "#bbefd545-d8ba-41a4-9d01-081cee3d2312",
-              "weight": 31.1400512382579,
+              "weight": 22.647484657691866,
               "children": [
                 {
                   "type": "tabset",
@@ -237,8 +225,7 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ],
-                  "active": true
+                  ]
                 },
                 {
                   "type": "tabset",
@@ -1558,6 +1545,265 @@
         "secondToPx": 200,
         "scrollLeft": 0
       }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/1[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {
+            "$selected": true
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -500.3863636363636,
+          "y": -283.7457386363636
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/0[flow-state]": {
+      "selection": {
+        "0": {
+          "5": {},
+          "6": {},
+          "10": {},
+          "13": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -506.15625,
+          "y": -259.484375
+        },
+        "scale": 1.25
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/3[flow-state]": {
+      "selection": {
+        "0": {
+          "2": {},
+          "11": {},
+          "12": {},
+          "13": {},
+          "14": {},
+          "15": {
+            "1": {}
+          },
+          "16": {},
+          "18": {},
+          "19": {},
+          "21": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -364.04545454545485,
+          "y": -309.5257123473541
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/2[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -424,
+          "y": -280.21749999999986
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/5[flow-state]": {
+      "selection": {
+        "0": {
+          "3": {},
+          "4": {},
+          "9": {},
+          "10": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -297,
+          "y": -238
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/6[flow-state]": {
+      "selection": {
+        "0": {
+          "2": {
+            "$selected": true
+          },
+          "3": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -296,
+          "y": -298
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/7[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {
+            "$selected": true
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -376,
+          "y": -241
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/8[flow-state]": {
+      "selection": {
+        "0": {
+          "1": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -309,
+          "y": -249
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/9[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -323.14,
+          "y": -347.43
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/10[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -400
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/11[flow-state]": {
+      "selection": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -400
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048_landscape.eez-project]:/userPages/4[flow-state]": {
+      "selection": {
+        "0": {
+          "1": {},
+          "15": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -418,
+          "y": -303
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
     }
   },
   "activeOutputSection": 0,
@@ -1566,6 +1812,7 @@
   "searchMatchWholeWord": false,
   "replaceEnabled": false,
   "replaceText": "",
+  "pageRuntimeFrontFace": true,
   "breakpoints": {},
   "watchExpressions": [],
   "showComponentDescriptions": true,
@@ -1579,6 +1826,6 @@
   ],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,
-  "flowZoom": 0.8,
+  "flowZoom": 1.25,
   "implementationLanguage": "C"
 }
