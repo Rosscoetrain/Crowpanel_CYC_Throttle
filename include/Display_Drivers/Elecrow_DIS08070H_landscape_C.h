@@ -22,8 +22,8 @@
 
 
 
-#define LCD_H_RES 480
-#define LCD_V_RES 800
+#define LCD_H_RES 800
+#define LCD_V_RES 480
 
 
 
@@ -118,16 +118,16 @@ public:
 
     {
       auto cfg = _touch_instance.config();
-      cfg.x_min = 800;
-      cfg.x_max = 0;
-      cfg.y_min = 480;
-      cfg.y_max = 0;
+      cfg.x_min = 0;
+      cfg.x_max = 800;
+      cfg.y_min = 0;
+      cfg.y_max = 480;
 
       cfg.pin_int = -1;
       cfg.bus_shared = false;
 //      cfg.offset_rotation = 0;
 //      cfg.offset_rotation = 1;
-      cfg.offset_rotation = 2;
+//      cfg.offset_rotation = 2;
 //      cfg.offset_rotation = 3;
       cfg.i2c_port = I2C_NUM_0;
       cfg.pin_sda = GPIO_NUM_19;

@@ -62,17 +62,10 @@ public:
     {
       auto cfg = _panel_instance.config();
 
-//#ifndef EEZ
       cfg.memory_width = 800;
       cfg.memory_height = 480;
       cfg.panel_width = 800;
       cfg.panel_height = 480;
-//#else
-//      cfg.memory_width = 800;
-//      cfg.memory_height = 480;
-//      cfg.panel_width = 800;
-//      cfg.panel_height = 480;
-//#endif
 
       cfg.offset_x = 0;
       cfg.offset_y = 0;
@@ -135,19 +128,11 @@ public:
 
     {
       auto cfg = _touch_instance.config();
-//#ifdef EEZ
       cfg.x_min = 0;
       cfg.x_max = 800;
       cfg.y_min = 0;
       cfg.y_max = 480;
       cfg.offset_rotation = 0;
-//#else
-//      cfg.x_min = 0;
-//      cfg.x_max = 800;
-//
-//      cfg.y_min = 0;
-//      cfg.y_max = 480;
-//#endif
 
       cfg.pin_int = -1;
       cfg.bus_shared = false;

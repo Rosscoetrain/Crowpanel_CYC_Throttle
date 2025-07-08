@@ -172,7 +172,7 @@ Network_Status_t networkStatus = NO_NETWORK;
  * The Menu_Items need to be in order as they are in the EEZ button matrix.
  */
 
-#ifndef ESP32DIS02170A_LS
+#if !defined ESP32DIS02170A_LS && !defined ESP32DIS08070H_LS
 typedef enum {
   CONFIG,
   ROSTER,

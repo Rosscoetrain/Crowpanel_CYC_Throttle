@@ -25,12 +25,14 @@
 
 #ifdef ESP32DIS02170A            // Elecrow DIS02170A 7in 800x480 advanced
 #include "Display_Drivers/Elecrow_DIS02170A_portrait_C.h"
-#elif ESP32DIS02170A_LS
+#elif ESP32DIS02170A_LS          // Elecrow DIS02170A 7in 800x480 advanced landscape mode
 #include "Display_Drivers/Elecrow_DIS02170A_landscape_C.h"
-#elif ESP32DIS06043H              // Elecrow DIS0604A 4.3in 320x240
+#elif ESP32DIS06043H             // Elecrow DIS0604A 4.3in 320x240
 #include "Display_Drivers/Elecrow_DIS06043H_portrait_R.h"
 #elif ESP32DIS08070H             // Elecrow DIS08070A 7in 800x480 basic
 #include "Display_Drivers/Elecrow_DIS08070H_portrait_C.h"
+#elif ESP32DIS08070H_LS          // Elecrow DIS08070A 7in 800x480 basic landscape mode
+#include "Display_Drivers/Elecrow_DIS08070H_landscape_C.h"
 #endif
 
 
@@ -171,7 +173,7 @@ void setup()
   gfx.initDMA();
 
 #ifdef EEZ
-#ifndef ESP32DIS02170A_LS
+#if !defined ESP32DIS02170A_LS && !defined ESP32DIS08070H_LS
   gfx.setRotation(1);
 #endif
 #endif
@@ -228,6 +230,8 @@ void setup()
 
   init_LittleFS();
 #endif
+
+  setBacklight(255);
 
   Serial.println( "Setup done" );
 }
