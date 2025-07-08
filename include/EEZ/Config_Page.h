@@ -30,6 +30,8 @@ void action_config_button(lv_event_t * e)
   int pressedButton = *((int*)(&user_data));
   switch(pressedButton)
   {
+
+#ifndef ESP32DIS06043H
     case (27):
       break;
 
@@ -62,6 +64,7 @@ void action_config_button(lv_event_t * e)
       Serial.println("List Request Sent");
       break;
     }
+#endif
 
     case (30):       //WiFi
     {

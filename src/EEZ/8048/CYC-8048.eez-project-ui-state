@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/7",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/1",
     "selectedBitmapObject": "[CYC-8048.eez-project]:/bitmaps/0",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -197,10 +197,10 @@
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "Config",
+                  "name": "Throttle",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/7",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/1",
                     "permanent": false
                   },
                   "icon": "svg:page"

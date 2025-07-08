@@ -24,13 +24,13 @@
 
 
 #ifdef ESP32DIS02170A            // Elecrow DIS02170A 7in 800x480 advanced
-#include "Display_Drivers/Elecrow_DIS02170A_C.h"
+#include "Display_Drivers/Elecrow_DIS02170A_portrait_C.h"
 #elif ESP32DIS02170A_LS
 #include "Display_Drivers/Elecrow_DIS02170A_landscape_C.h"
-#elif ESP32DIS0604R              // Elecrow DIS0604A 4.3in 320x240
-//#include "Display_Drivers/DIS0604R_LovyanGFX_R.h"
+#elif ESP32DIS06043H              // Elecrow DIS0604A 4.3in 320x240
+#include "Display_Drivers/Elecrow_DIS06043H_portrait_R.h"
 #elif ESP32DIS08070H             // Elecrow DIS08070A 7in 800x480 basic
-#include "Display_Drivers/Elecrow_DIS08070H_C.h"
+#include "Display_Drivers/Elecrow_DIS08070H_portrait_C.h"
 #endif
 
 
@@ -75,6 +75,14 @@
 #include "EEZ/8048_landscape/screens.h"
 #include "EEZ/8048_landscape/images.h"
 #endif
+
+#ifdef RES4827
+#include "EEZ/4827/actions.h"
+#include "EEZ/4827/ui.h"
+#include "EEZ/4827/screens.h"
+#include "EEZ/4827/images.h"
+#endif
+
 
 
 #include "EEZ/functions.h"

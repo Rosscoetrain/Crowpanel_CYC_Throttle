@@ -1,13 +1,13 @@
 /*
  *
- * @file Elecrow_DIS02170A_C.h
+ * @file Elecrow_DIS02170A_landscape_C.h
  * 
  * 
  *
  */
 
-#ifndef ESP32_DIS02170A_C_H
-#define ESP32_DIS02170A_C_H
+#ifndef ESP32_DIS02170A_LANDSCAPE_C_H
+#define ESP32_DIS02170A_LANDSCAPE_C_H
 
 #define LGFX_USE_V1
 #include <LovyanGFX.hpp>
@@ -222,5 +222,5 @@ void init_Hardware()
 
  }
 
- #endif // ESP32_DIS02170A_C_H
+ #endif // ESP32_DIS02170A_LANDSCAPE_C_H
  

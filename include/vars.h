@@ -16,6 +16,9 @@
 #ifdef RES8048_LS
 #include "EEZ/8048_landscape/screens.h"
 #endif
+#ifdef RES4827
+#include "EEZ/4827/screens.h"
+#endif
 
 #endif
 

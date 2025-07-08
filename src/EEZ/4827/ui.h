@@ -1,7 +1,3 @@
-//#include "../../defines.h"
-
-#ifdef RES4827
-
 #ifndef EEZ_LVGL_UI_GUI_H
 #define EEZ_LVGL_UI_GUI_H
 
@@ -35,5 +31,3 @@ void loadScreen(enum ScreensEnum screenId);
 #endif
 
 #endif // EEZ_LVGL_UI_GUI_H
-
-#endif // RES4827

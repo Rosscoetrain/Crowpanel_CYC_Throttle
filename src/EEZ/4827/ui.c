@@ -1,7 +1,3 @@
-//#include "../../defines.h"
-
-#ifdef RES4827
-
 #if defined(EEZ_FOR_LVGL)
 #include <eez/core/vars.h>
 #endif
@@ -65,5 +61,3 @@ void ui_tick() {
 }
 
 #endif
-
-#endif // RES4827

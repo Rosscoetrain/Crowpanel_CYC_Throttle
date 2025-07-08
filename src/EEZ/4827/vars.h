@@ -1,7 +1,3 @@
-//#include "../../defines.h"
-
-#ifdef RES4827
-
 #ifndef EEZ_LVGL_UI_VARS_H
 #define EEZ_LVGL_UI_VARS_H
 
@@ -60,5 +56,3 @@ extern void set_var_ssi_ds(const char *value);
 #endif
 
 #endif /*EEZ_LVGL_UI_VARS_H*/
-
-#endif // RES4827

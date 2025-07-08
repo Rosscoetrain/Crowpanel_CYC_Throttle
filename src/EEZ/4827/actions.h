@@ -1,7 +1,3 @@
-//#include "../../defines.h"
-
-#ifdef RES4827
-
 #ifndef EEZ_LVGL_UI_EVENTS_H
 #define EEZ_LVGL_UI_EVENTS_H
 
@@ -40,6 +36,7 @@ extern void action_do_scan(lv_event_t * e);
 extern void action_scan_button(lv_event_t * e);
 extern void action_fedit_slot(lv_event_t * e);
 extern void action_fclear_slot(lv_event_t * e);
+extern void action_functions_button(lv_event_t * e);
 
 
 #ifdef __cplusplus
@@ -47,5 +44,3 @@ extern void action_fclear_slot(lv_event_t * e);
 #endif
 
 #endif /*EEZ_LVGL_UI_EVENTS_H*/
-
-#endif // RES4827
