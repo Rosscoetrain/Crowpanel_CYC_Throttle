@@ -1,8 +1,10 @@
 /*
-
+ *
+ * @files defines.h
+ * 
  *   By Ross Scanlon iam@rosscoe.com
-
-*/
+ *
+ */
 
 #ifndef DEFINES_H
 #define DEFINES_H

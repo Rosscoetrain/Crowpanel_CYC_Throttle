@@ -1,4 +1,7 @@
 /*
+ *
+ * @file vars.h
+ * 
  * by Ross iam@rosscoe.com
  */
 
@@ -6,8 +9,6 @@
 #define VARS_H
 
 #include <WiFi.h>
-//#include <LittleFS.h>
-//#include "FS.h"
 
 #ifdef EEZ
 #ifdef RES8048
@@ -43,10 +44,13 @@ uint8_t funcOption[NUM_LOCOS][NUM_FUNC_SLOTS];
 //uint8_t resumeOnGo = 0;
 //uint8_t runState = 1;                                           //1 = Running, 0 = Stoppe
 
+
+
+
+#if defined ESP32DIS02170A || defined ESP32DIS08070H || defined ESP32DIS06043H
 uint16_t map_xlate[] = {0, 3, 6, 9, 12, 1, 4, 7, 10, 13};
 uint16_t func_xlate[] = {0, 2, 4, 6, 8, 1, 3, 5, 7, 9};
 uint16_t abs_xlate[] = {0, 5, 1, 6, 2, 7, 3, 8, 4, 9};
-
 const char * btnMap_functions[] = {
                           " ", " ", "\n",
                           " ", " ", "\n",
@@ -54,6 +58,16 @@ const char * btnMap_functions[] = {
                           " ", " ", "\n",
                           " ", " ", NULL
                           };
+#else
+uint16_t map_xlate[] = {0, 1, 2, 3, 4, 6, 7, 8, 9, 10};  // this is the order in the map on screen, bottom row first 5 is missing as it's the "\n"
+uint16_t func_xlate[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};  // this is the order that the functions slots will be in the map
+uint16_t abs_xlate[] =  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+  const char * btnMap_functions[] = {
+    " ", " ", " ", " ", " ", "\n",
+    " ", " ", " ", " ", " ", NULL
+  };
+#endif
 
 
 
