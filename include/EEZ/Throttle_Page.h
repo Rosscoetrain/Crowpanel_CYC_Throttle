@@ -81,6 +81,7 @@ void populateThrottle()
     if(selectedIDs[activeThrottle][i] != 255)                           //ignore unused Loco IDs
     {
       lv_dropdown_add_option(objects.dd_locos,locoName[selectedIDs[activeThrottle][i]],i); //Add all valid Locos to the list
+//      Serial.print("loco ");Serial.println(locoName[selectedIDs[activeThrottle][i]]);
     }else
     {
       lv_dropdown_add_option(objects.dd_locos,"",i); //Blank out unused Loco IDs in the list
@@ -328,7 +329,6 @@ void setLocoRev()
 }
 
 #if defined ESP32DIS06043H || defined ESP32DIS08070H || defined ESP32DIS02170A
-//#if defined ESP32DIS02170A
 
 void action_functions_button(lv_event_t * e)
 {
