@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/1",
+    "selectedUserPageObject": "[CYC-8048.eez-project]:/userPages/8",
     "selectedBitmapObject": "[CYC-8048.eez-project]:/bitmaps/0",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -197,10 +197,10 @@
                 {
                   "type": "tab",
                   "id": "#c0d6541d-0bb8-4ad3-9e35-f4befb8b017f",
-                  "name": "Throttle",
+                  "name": "Credits",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048.eez-project]:/userPages/1",
+                    "objectPath": "[CYC-8048.eez-project]:/userPages/8",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -217,8 +217,7 @@
                   },
                   "icon": "material:settings"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -238,7 +237,8 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -1314,9 +1314,10 @@
     "[CYC-8048.eez-project]:/userPages/9[flow-state]": {
       "selection": {
         "0": {
-          "3": {}
-        },
-        "$selected": true
+          "3": {
+            "$selected": true
+          }
+        }
       },
       "transform": {
         "translate": {
@@ -1473,10 +1474,10 @@
       "selection": {
         "0": {
           "2": {},
-          "8": {},
-          "21": {}
-        },
-        "$selected": true
+          "7": {},
+          "20": {},
+          "26": {}
+        }
       },
       "transform": {
         "translate": {
@@ -1542,6 +1543,48 @@
           "7": {}
         },
         "$selected": true
+      },
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -400
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048.eez-project]:/userPages/12[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -136,
+          "y": -240
+        },
+        "scale": 0.8
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-8048.eez-project]:/userPages/11[flow-state]": {
+      "selection": {
+        "0": {
+          "2": {
+            "$selected": true
+          }
+        }
       },
       "transform": {
         "translate": {

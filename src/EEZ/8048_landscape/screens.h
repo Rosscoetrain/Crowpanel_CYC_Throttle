@@ -200,11 +200,11 @@ typedef struct _objects_t {
     lv_obj_t *obj47;
     lv_obj_t *ta_tft_backlight;
     lv_obj_t *ta_wifi_timeout;
-    lv_obj_t *kbd_config;
     lv_obj_t *obj48;
     lv_obj_t *obj49;
     lv_obj_t *obj50;
     lv_obj_t *lbl_roster;
+    lv_obj_t *kbd_config;
     lv_obj_t *credits_button_13;
     lv_obj_t *obj51;
     lv_obj_t *info_button_13;

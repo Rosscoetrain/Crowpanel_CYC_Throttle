@@ -4374,17 +4374,6 @@ void create_screen_config() {
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
         {
-            // kbd_config
-            lv_obj_t *obj = lv_keyboard_create(parent_obj);
-            objects.kbd_config = obj;
-            lv_obj_set_pos(obj, 11, 216);
-            lv_obj_set_size(obj, 459, 243);
-            lv_keyboard_set_mode(obj, LV_KEYBOARD_MODE_NUMBER);
-            lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
-            lv_obj_set_style_align(obj, LV_ALIGN_DEFAULT, LV_PART_MAIN | LV_STATE_DEFAULT);
-            lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
-        }
-        {
             lv_obj_t *obj = lv_label_create(parent_obj);
             lv_obj_set_pos(obj, 20, 214);
             lv_obj_set_size(obj, 170, LV_SIZE_CONTENT);
@@ -4510,6 +4499,17 @@ void create_screen_config() {
             lv_obj_set_size(obj, 310, LV_SIZE_CONTENT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_label_set_text(obj, "");
+        }
+        {
+            // kbd_config
+            lv_obj_t *obj = lv_keyboard_create(parent_obj);
+            objects.kbd_config = obj;
+            lv_obj_set_pos(obj, 171, 209);
+            lv_obj_set_size(obj, 459, 243);
+            lv_keyboard_set_mode(obj, LV_KEYBOARD_MODE_NUMBER);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_set_style_align(obj, LV_ALIGN_DEFAULT, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(obj, &lv_font_montserrat_24, LV_PART_MAIN | LV_STATE_DEFAULT);
         }
     }
     

@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/0",
+    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/7",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
     }
@@ -155,7 +155,7 @@
                 {
                   "type": "tabset",
                   "id": "#ef0592f9-bc36-4d33-9070-6890c07f67ef",
-                  "weight": 0.7063197026022305,
+                  "weight": 1.4269005373289387,
                   "enableClose": false,
                   "children": [
                     {
@@ -171,7 +171,7 @@
                 {
                   "type": "tabset",
                   "id": "#701bc4ef-1399-43b0-8866-5217bb966cff",
-                  "weight": 1,
+                  "weight": 0.27941916527329086,
                   "enableClose": false,
                   "children": [
                     {
@@ -196,10 +196,10 @@
                 {
                   "type": "tab",
                   "id": "#e5705479-239e-4456-983d-50fd172f449a",
-                  "name": "Main",
+                  "name": "Config",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/0",
+                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/7",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -1690,18 +1690,25 @@
       "selection": {
         "0": {
           "0": {},
-          "1": {},
-          "2": {
-            "$selected": true
-          }
+          "1": {
+            "0": {}
+          },
+          "2": {},
+          "6": {},
+          "9": {},
+          "11": {},
+          "13": {
+            "0": {}
+          },
+          "14": {}
         }
       },
       "transform": {
         "translate": {
           "x": -376,
-          "y": -241
+          "y": -361
         },
-        "scale": 0.8
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,
@@ -1821,7 +1828,6 @@
   "lvglPart": "MAIN",
   "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [
-    "TEXT",
     "MISCELLANEOUS"
   ],
   "showInactiveFlowsInDebugger": true,
