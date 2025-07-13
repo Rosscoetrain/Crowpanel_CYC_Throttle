@@ -107,6 +107,7 @@
 #include "SLS/ui.h"
 #endif
 
+#include "version.h"
 
 
 /* Change to your screen resolution */
