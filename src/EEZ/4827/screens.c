@@ -620,7 +620,8 @@ void create_screen_main() {
                 1 | LV_BTNMATRIX_CTRL_CHECKABLE,
                 1 | LV_BTNMATRIX_CTRL_CHECKABLE,
                 1 | LV_BTNMATRIX_CTRL_CHECKABLE,
-                1 | LV_BTNMATRIX_CTRL_DISABLED | LV_BTNMATRIX_CTRL_CHECKABLE,
+//                1 | LV_BTNMATRIX_CTRL_DISABLED | LV_BTNMATRIX_CTRL_CHECKABLE,
+                1 | LV_BTNMATRIX_CTRL_CHECKABLE,
                 1 | LV_BTNMATRIX_CTRL_CHECKABLE,
                 1 | LV_BTNMATRIX_CTRL_CHECKABLE,
             };

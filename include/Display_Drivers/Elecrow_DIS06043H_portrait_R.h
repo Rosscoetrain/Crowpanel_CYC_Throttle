@@ -16,8 +16,8 @@
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 #include <driver/i2c.h>
 
-#define LCD_H_RES 480
-#define LCD_V_RES 272
+#define LCD_H_RES 272
+#define LCD_V_RES 480
 
 
 /*******************************************************************************
@@ -26,8 +26,8 @@
 
 #define GFX_BL 2 // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
 #define ROTATION 1
-#define SCREEN_WIDTH 272          //Using EEZ Orientation
-#define SCREEN_HEIGHT 480
+#define SCREEN_WIDTH 480          //Using EEZ Orientation
+#define SCREEN_HEIGHT 272
 #define DISPLAY_WIDTH 480         //Physical Display Properties ex rotation
 #define DISPLAY_HEIGHT 272
 #define AUTO_FLUSH true
