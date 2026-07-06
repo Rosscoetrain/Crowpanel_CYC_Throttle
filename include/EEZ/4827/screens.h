@@ -21,6 +21,7 @@ typedef struct _objects_t {
     lv_obj_t *credits;
     lv_obj_t *info;
     lv_obj_t *functions;
+    lv_obj_t *routes;
     lv_obj_t *btn_stop;
     lv_obj_t *btn_power;
     lv_obj_t *sw_dir;
@@ -39,6 +40,7 @@ typedef struct _objects_t {
     lv_obj_t *btn_s9;
     lv_obj_t *btn_read;
     lv_obj_t *btn_write;
+    lv_obj_t *btn_select_routes_1;
     lv_obj_t *lbl_stop;
     lv_obj_t *lbl_power;
     lv_obj_t *obj0;
@@ -209,6 +211,11 @@ typedef struct _objects_t {
     lv_obj_t *obj62;
     lv_obj_t *func_description;
     lv_obj_t *ex_functions_mtx;
+    lv_obj_t *btn_cancel_routes_1;
+    lv_obj_t *obj63;
+    lv_obj_t *obj64;
+    lv_obj_t *obj65;
+    lv_obj_t *tbl_roster_1;
 } objects_t;
 
 extern objects_t objects;
@@ -227,6 +234,7 @@ enum ScreensEnum {
     SCREEN_ID_CREDITS = 11,
     SCREEN_ID_INFO = 12,
     SCREEN_ID_FUNCTIONS = 13,
+    SCREEN_ID_ROUTES = 14,
 };
 
 void create_screen_main();
@@ -267,6 +275,9 @@ void tick_screen_info();
 
 void create_screen_functions();
 void tick_screen_functions();
+
+void create_screen_routes();
+void tick_screen_routes();
 
 void tick_screen_by_id(enum ScreensEnum screenId);
 void tick_screen(int screen_index);

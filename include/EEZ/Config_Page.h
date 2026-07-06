@@ -31,7 +31,7 @@ void action_config_button(lv_event_t * e)
   switch(pressedButton)
   {
 
-#ifndef ESP32DIS06043H
+//#ifndef ESP32DIS06043H
     case (27):
       break;
 
@@ -43,7 +43,7 @@ void action_config_button(lv_event_t * e)
 
     case (29):              //Retrieve EX-Rail Roster
     {
-      dccexProtocol.disconnect();
+//      dccexProtocol.disconnect();
       //First Clear the Roster
       for(int i = 0; i < NUM_LOCOS; i++)
       {
@@ -58,13 +58,16 @@ void action_config_button(lv_event_t * e)
           strcpy(funcName[i][f], " ");
         }
       }
-      dccexProtocol.connect(&client);
+//      dccexProtocol.connect(&client);
       lv_label_set_text(objects.lbl_roster,"Sending List Request");
       dccexProtocol.getLists(true,false,false,false);
-      Serial.println("List Request Sent");
+      delay(1000);
+//      Serial.println("List Request Sent");
+      setupExrailRoster();
+      lv_label_set_text(objects.lbl_roster,"Roster updated");
       break;
     }
-#endif
+//#endif
 
     case (30):       //WiFi
     {

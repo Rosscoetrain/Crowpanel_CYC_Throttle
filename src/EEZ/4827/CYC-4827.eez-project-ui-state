@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-4827.eez-project]:/userPages/12",
+    "selectedUserPageObject": "[CYC-4827.eez-project]:/userPages/9",
     "selectedBitmapObject": "[CYC-4827.eez-project]:/bitmaps/6",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -191,7 +191,7 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 67.31075610276633,
+              "weight": 61.44702417366871,
               "selected": 1,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
@@ -211,21 +211,20 @@
                 {
                   "type": "tab",
                   "id": "#a1cdbd76-72c9-4afa-a6cb-ec2bb37044cc",
-                  "name": "Functions",
+                  "name": "Config",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-4827.eez-project]:/userPages/12",
+                    "objectPath": "[CYC-4827.eez-project]:/userPages/9",
                     "permanent": false
                   },
                   "icon": "svg:page"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
               "id": "#60095759-ba99-4bec-b883-d2e899f98ff3",
-              "weight": 14.47608819995973,
+              "weight": 20.339820129057337,
               "children": [
                 {
                   "type": "tabset",
@@ -240,7 +239,8 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -1086,16 +1086,13 @@
           "3": {},
           "4": {},
           "5": {},
-          "8": {
-            "$selected": true
-          },
           "11": {}
         }
       },
       "transform": {
         "translate": {
           "x": -187.08333333333326,
-          "y": -347.8379025591094
+          "y": -227.8379025591094
         },
         "scale": 1.25
       },
@@ -1132,7 +1129,10 @@
     "[CYC-4827.eez-project]:/userPages/9[flow-state]": {
       "selection": {
         "0": {
-          "3": {}
+          "3": {},
+          "9": {
+            "$selected": true
+          }
         }
       },
       "transform": {
@@ -1209,7 +1209,7 @@
           "x": -136,
           "y": -240
         },
-        "scale": 1.5
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,
@@ -1354,6 +1354,27 @@
     },
     "[CYC-4827.eez-project]:/userPages/12[flow-state]": {
       "selection": {},
+      "transform": {
+        "translate": {
+          "x": -136,
+          "y": -240
+        },
+        "scale": 1.25
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[CYC-4827.eez-project]:/userPages/13[flow-state]": {
+      "selection": {
+        "0": {
+          "1": {},
+          "2": {}
+        }
+      },
       "transform": {
         "translate": {
           "x": -136,

@@ -113,18 +113,19 @@ static void throttle_selection_handler_cb(lv_event_t * e)
 
 static void functions_cb(lv_event_t * e)
 {
-  if(rosterMode == GUEST_INACTIVE)
+//  if(rosterMode == GUEST_INACTIVE)
   {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t * obj = lv_event_get_target(e);
     uint32_t mapslot = lv_btnmatrix_get_selected_btn(obj); 
     if(mapslot >9) return;
     uint32_t fslot = abs_xlate[mapslot];
+
     if(funcName[activeLocoID][fslot] != "")
     {
       if(code == LV_EVENT_PRESSED)
       {
-//        Serial.printf("Function Pressed: %d\n", funcOption[activeLocoID][fslot]);
+        Serial.printf("Function Pressed: %d\n", funcOption[activeLocoID][fslot]);
         if(funcState[activeLocoID][fslot] == 1) funcState[activeLocoID][fslot] = 0;
         else funcState[activeLocoID][fslot] = 1;
         //Send the DCCEX Command...

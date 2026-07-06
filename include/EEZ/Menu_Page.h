@@ -86,7 +86,7 @@ static void menu_cb(lv_event_t * e)
         loadScreen(SCREEN_ID_WI_FI);
         break;
       case ROUTES:
-//        loadScreen(SCREEN_ID_ROUTES);
+        loadScreen(SCREEN_ID_ROUTES);
         break;
 #if !defined ESP32DIS02170A_LS && !defined ESP32DIS08070H_LS
         case SAVE:

@@ -234,11 +234,16 @@ void setup()
 
   setBacklight(255);
 
+  dccexProtocol.setLogStream(&Serial);
+  dccexProtocol.enableHeartbeat();
+  dccexProtocol.connect(&client);
+
   Serial.println( "Setup done" );
 }
 
 void loop()
 {
   lv_timer_handler(); /* let the GUI do its work */
+  dccexProtocol.check();
   delay(10);
 }

@@ -1,4 +1,4 @@
-/* 
+/*
  *****************************************************************************************************************************
  *  COPYRIGHT (c) 2025 Norman Halland (NormHal@gmail.com) unless otherwise noted.
  *
@@ -100,7 +100,7 @@ void setupLocalRoster()
   {
     for(int j = 0; j < NUM_FUNC_SLOTS; j++) strcpy(funcNumber[i][j], "255");
   }
-  
+
   Serial.println("Now populating Functions");
   populateLocoFunctions("/functions.txt");
 
@@ -120,11 +120,15 @@ void setupLocalRoster()
 void setupExrailRoster()
 {
   dccexProtocol.getLists(true,false,false,false);
-  delay(1000);
+  delay(2000);
   Serial.println("Replacing Roster with EX-Rail list");
-  uint16_t id = 0;  
-//  delay(500);   
-  for (Loco *loco = dccexProtocol.roster->getFirst(); loco; loco = loco->getNext()) 
+  uint16_t id = 0;
+  uint8_t slot = 0;
+  std::string lAddr;
+  std::string funcNum;
+//  delay(500);
+
+  for (Loco *loco = dccexProtocol.roster->getFirst(); loco; loco = loco->getNext())
   {
     int ad = loco->getAddress();
     const char *name = loco->getName();
@@ -134,10 +138,46 @@ void setupExrailRoster()
     Serial.print(" Name: ");
     Serial.print(name);
     Serial.println();
+
+
+    lv_table_set_cell_value(objects.tbl_roster, id, 0, name);
+    lAddr = std::to_string(ad);
+    lv_table_set_cell_value(objects.tbl_roster, id, 1, lAddr.c_str());
+
+    strcpy(locoName[id], name);
+    strcpy(locoAddress[id], lAddr.c_str());
+    locoSpeed[id] = 0;
+    locoDir[id] = 1;       //Default to Forward
+
+    slot = 0;
+
+    for (int i = 0; i < 32; i++)
+    {
+      const char *fName = loco->getFunctionName(i);
+      funcNum = std::to_string(i);
+      if ((fName != nullptr) && (fName[0] != '\0'))
+      {
+        Serial.printf("    Function Number: %d |", i);
+        Serial.print(fName);
+        Serial.print("|");
+        if (loco->isFunctionMomentary(i)) {
+          Serial.print(" - Momentary");
+        }
+        strcpy(funcNumber[id][slot], funcNum.c_str());
+        strcpy(funcName[id][slot], fName);
+        funcOption[id][slot] = loco->isFunctionMomentary(i);                                             //0= Function | Momentary, 1=image
+        Serial.printf(" slot; %d", slot);
+
+        slot++;
+        Serial.println();
+      }
+    }
+
     id++;
   }
+
 /*
-  for (Loco *loco = dccexProtocol.roster->getFirst(); loco; loco = loco->getNext()) 
+  for (Loco *loco = dccexProtocol.roster->getFirst(); loco; loco = loco->getNext())
   {
     int ad = loco->getAddress();
     const char *lName = loco->getName();
@@ -152,12 +192,11 @@ void setupExrailRoster()
     Serial.printf("Address: %s ", locoAddress[id]);
     Serial.printf(" Name: %s ", locoName[id]);
     delay(1000);
-    */
-  /*
-    for (int i = 0; i < 32; i++) 
+/*
+    for (int i = 0; i < 32; i++)
     {
       const char *fName = loco->getFunctionName(i);
-      if (fName != nullptr) 
+      if (fName != nullptr)
       {
         Serial.printf("    Function Number: %d ", i);
         Serial.print(fName);
@@ -167,16 +206,15 @@ void setupExrailRoster()
         Serial.println();
       }
     }
-
     id++;
     Serial.println();
   }
+
   Serial.println("Now Populating the Roster...");
   for(int i = 0; i < id; i++)
   {
     lv_table_set_cell_value(objects.tbl_roster, i, 0, locoName[i]);
     lv_table_set_cell_value(objects.tbl_roster, i, 1, locoAddress[i]);
   }
-  */
-//  }
+*/
 }
