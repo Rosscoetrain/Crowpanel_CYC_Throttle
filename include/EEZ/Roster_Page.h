@@ -19,10 +19,14 @@
 /*
 
  *   By Ross Scanlon iam@rosscoe.com
+ *   RosscoeTrain
+ *   (c) 2025
 
 */
 
-//#include "Roster_Page.h"
+#ifndef ROSTER_PAGE_H
+#define ROSTER_PAGE_H
+
 
 static void tbl_roster_cb(lv_event_t * e)
 {
@@ -120,7 +124,7 @@ void setupLocalRoster()
 void setupExrailRoster()
 {
   dccexProtocol.getLists(true,false,false,false);
-  delay(2000);
+  delay(5000);
   Serial.println("Replacing Roster with EX-Rail list");
   uint16_t id = 0;
   uint8_t slot = 0;
@@ -176,45 +180,9 @@ void setupExrailRoster()
     id++;
   }
 
-/*
-  for (Loco *loco = dccexProtocol.roster->getFirst(); loco; loco = loco->getNext())
-  {
-    int ad = loco->getAddress();
-    const char *lName = loco->getName();
-    strcpy(locoName[id], lName);
-    char *lAddr;
-    itoa(ad, lAddr,4);
-    strcpy(locoAddress[id], lAddr);
-    locoSpeed[id] = 0;
-    locoDir[id] = 1;       //Default to Forward
-    Serial.println();
-    Serial.printf("Loco ID: %d ", id);
-    Serial.printf("Address: %s ", locoAddress[id]);
-    Serial.printf(" Name: %s ", locoName[id]);
-    delay(1000);
-/*
-    for (int i = 0; i < 32; i++)
-    {
-      const char *fName = loco->getFunctionName(i);
-      if (fName != nullptr)
-      {
-        Serial.printf("    Function Number: %d ", i);
-        Serial.print(fName);
-        if (loco->isFunctionMomentary(i)) {
-          Serial.print(" - Momentary");
-        }
-        Serial.println();
-      }
-    }
-    id++;
-    Serial.println();
-  }
+  rosterMode = GUEST_INACTIVE;
 
-  Serial.println("Now Populating the Roster...");
-  for(int i = 0; i < id; i++)
-  {
-    lv_table_set_cell_value(objects.tbl_roster, i, 0, locoName[i]);
-    lv_table_set_cell_value(objects.tbl_roster, i, 1, locoAddress[i]);
-  }
-*/
 }
+
+
+#endif

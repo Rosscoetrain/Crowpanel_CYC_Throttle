@@ -19,8 +19,13 @@
 /*
 
  *   By Ross Scanlon iam@rosscoe.com
+ *   RosscoeTrain
+ *   (c) 2025
 
 */
+
+#ifndef CONFIG_PAGE_H
+#define CONFIG_PAGE_H
 
 #include "functions.h"
 
@@ -32,18 +37,12 @@ void action_config_button(lv_event_t * e)
   {
 
 //#ifndef ESP32DIS06043H
-    case (27):
-      break;
-
-    case (28):              //Reload Local Roster
-      lv_label_set_text(objects.lbl_roster, "Restoring Local Roster");
-      setupLocalRoster();
-      lv_label_set_text(objects.lbl_roster, "Local Roster Restored");
-      break;
-
-    case (29):              //Retrieve EX-Rail Roster
-    {
-//      dccexProtocol.disconnect();
+    case (27):              //Retreive EX-Rail Roster 
+      if (WiFi.status() != WL_CONNECTED)
+       {
+        lv_label_set_text(objects.lbl_roster, "Not connected to CS");
+        return;
+       }
       //First Clear the Roster
       for(int i = 0; i < NUM_LOCOS; i++)
       {
@@ -58,16 +57,29 @@ void action_config_button(lv_event_t * e)
           strcpy(funcName[i][f], " ");
         }
       }
-//      dccexProtocol.connect(&client);
       lv_label_set_text(objects.lbl_roster,"Sending List Request");
-      dccexProtocol.getLists(true,false,false,false);
-      delay(1000);
-//      Serial.println("List Request Sent");
+//      dccexProtocol.getLists(true,false,false,false);
+//      delay(1000);
       setupExrailRoster();
       lv_label_set_text(objects.lbl_roster,"Roster updated");
       break;
-    }
-//#endif
+
+    case (28):              //Reload Local Roster
+      lv_label_set_text(objects.lbl_roster, "Restoring Local Roster");
+      setupLocalRoster();
+      lv_label_set_text(objects.lbl_roster, "Local Roster Restored");
+      break;
+
+    case (29):              //Save EX-Rail Roster to local
+      if (WiFi.status() != WL_CONNECTED)
+       {
+        lv_label_set_text(objects.lbl_roster, "Not connected to CS");
+        return;
+       }
+      locosDirty = 1;
+      functionsDirty = 1;
+      saveLittleFS();
+      break;
 
     case (30):       //WiFi
     {
@@ -91,3 +103,5 @@ void action_config_button(lv_event_t * e)
       break;
   }
 }
+
+#endif

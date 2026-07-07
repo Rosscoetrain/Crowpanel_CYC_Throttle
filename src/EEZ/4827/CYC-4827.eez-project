@@ -13807,7 +13807,7 @@
               "scrollSnapX": "",
               "scrollSnapY": "",
               "checkedStateType": "literal",
-              "disabledState": true,
+              "disabledState": false,
               "disabledStateType": "literal",
               "states": "FOCUSED",
               "localStyles": {

@@ -4178,7 +4178,7 @@ void create_screen_config() {
             lv_obj_set_pos(obj, 165, 190);
             lv_obj_set_size(obj, 100, 50);
             lv_obj_add_event_cb(obj, action_config_button, LV_EVENT_RELEASED, (void *)27);
-            lv_obj_add_state(obj, LV_STATE_FOCUSED|LV_STATE_DISABLED);
+            lv_obj_add_state(obj, LV_STATE_FOCUSED);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_PRESSED);
             lv_obj_set_style_bg_grad_dir(obj, LV_GRAD_DIR_VER, LV_PART_MAIN | LV_STATE_PRESSED);
             lv_obj_set_style_bg_grad_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_PRESSED);

@@ -113,7 +113,7 @@ static void throttle_selection_handler_cb(lv_event_t * e)
 
 static void functions_cb(lv_event_t * e)
 {
-//  if(rosterMode == GUEST_INACTIVE)
+  if(rosterMode == GUEST_INACTIVE)
   {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t * obj = lv_event_get_target(e);
