@@ -80,6 +80,11 @@ void init_callbacks()
 
   lv_obj_add_event_cb(objects.ta_tft_backlight, ta_event_cb, LV_EVENT_ALL, objects.kbd_config );
   lv_obj_add_event_cb(objects.ta_wifi_timeout, ta_event_cb, LV_EVENT_ALL, objects.kbd_config );
+
+// routes
+  lv_obj_add_event_cb(objects.dd_location, dd_location_cb, LV_EVENT_ALL, NULL);
+  lv_obj_add_event_cb(objects.tbl_routes, tbl_route_cb, LV_EVENT_VALUE_CHANGED, NULL);
+
  }
 
 

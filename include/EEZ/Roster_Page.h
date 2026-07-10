@@ -123,8 +123,8 @@ void setupLocalRoster()
 */
 void setupExrailRoster()
 {
-  dccexProtocol.getLists(true,false,false,false);
-  delay(5000);
+//  dccexProtocol.getLists(true,false,false,false);
+  delay(1000);
   Serial.println("Replacing Roster with EX-Rail list");
   uint16_t id = 0;
   uint8_t slot = 0;
@@ -180,7 +180,7 @@ void setupExrailRoster()
     id++;
   }
 
-  rosterMode = GUEST_INACTIVE;
+  rosterMode = NORMAL_MODE;
 
 }
 

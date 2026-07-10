@@ -215,7 +215,11 @@ typedef struct _objects_t {
     lv_obj_t *obj63;
     lv_obj_t *obj64;
     lv_obj_t *obj65;
-    lv_obj_t *tbl_roster_1;
+    lv_obj_t *tbl_routes;
+    lv_obj_t *lbl_routes;
+    lv_obj_t *dd_location;
+    lv_obj_t *btn_load_routes_1;
+    lv_obj_t *obj66;
 } objects_t;
 
 extern objects_t objects;

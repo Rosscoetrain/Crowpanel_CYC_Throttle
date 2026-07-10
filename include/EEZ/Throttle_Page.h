@@ -172,7 +172,10 @@ void setSpeed(uint16_t locoAddr, uint16_t newSpeed, uint8_t newDir)
   String speedCMD = ("<t " + String(locoAddr) + " "
          + speedString + " " + String(newDir) + ">");
   Serial.println(speedCMD);
-  if(!client.print(speedCMD)) Serial.println("Transmit Failed");
+  if(!client.print(speedCMD))
+   {
+    Serial.println("Transmit Failed");
+   }
 }
 
 void action_throttle_button(lv_event_t * e)

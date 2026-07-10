@@ -58,9 +58,8 @@ void action_config_button(lv_event_t * e)
         }
       }
       lv_label_set_text(objects.lbl_roster,"Sending List Request");
-//      dccexProtocol.getLists(true,false,false,false);
-//      delay(1000);
-      setupExrailRoster();
+//      setupExrailRoster();
+      dccexProtocol.getLists(true,false,false,false);
       lv_label_set_text(objects.lbl_roster,"Roster updated");
       break;
 

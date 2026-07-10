@@ -15,4 +15,7 @@ void setupFuncEditSlots();
 void setupLocalRoster();
 void setupExrailRoster();
 
+void setupExrailRoutes();
+
+
 #endif

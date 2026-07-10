@@ -12,7 +12,7 @@
  * 
  *  7inch 800x480 Advanced  tested working
  *  7inch 800x480 Basic     in development
- *  4.3 inch 320x240 Basic  in development
+ *  4.3 inch 320x240 Basic  tested working
  * 
  * 
 */
@@ -45,6 +45,7 @@
 #include <WiFi.h>
 
 #include <DCCEXProtocol.h>
+#include "dccExProtocolDelegate.h"
 
 
 /*
@@ -97,6 +98,7 @@
 #include "EEZ/Menu_Page.h"
 #include "EEZ/Program_Page.h"
 #include "EEZ/Roster_Page.h"
+#include "EEZ/Routes_Page.h"
 #include "EEZ/WiFi_Page.h"
 #include "EEZ/Scan_Page.h"
 
@@ -234,8 +236,25 @@ void setup()
 
   setBacklight(255);
 
+
+/*
+  // Connect to the server
+  Serial.println("Connecting to the server...");
+  if (!client.connect(serverAddress, serverPort)) {
+    Serial.println("connection failed");
+    while (1)
+      delay(1000);
+  }
+  Serial.println("Connected to the server");
+*/
+
+  // Enable logging on Serial
   dccexProtocol.setLogStream(&Serial);
   dccexProtocol.enableHeartbeat();
+
+  // Pass the delegate instance to wiThrottleProtocol
+  dccexProtocol.setDelegate(&myDelegate);
+
   dccexProtocol.connect(&client);
 
   Serial.println( "Setup done" );

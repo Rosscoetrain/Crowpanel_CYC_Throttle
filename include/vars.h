@@ -213,6 +213,26 @@ typedef enum {
  #endif
 
 DCCEXProtocol dccexProtocol;
+MyDelegate myDelegate;
 
+
+
+// route variables
+
+String locationArray[MAX_ROUTE_LOCATION];
+bool locationsExist = false;
+
+char currentLocation[20];
+
+struct routeType {
+  char loc[5];
+  char name[50];
+  uint16_t id;
+  RouteType type;
+};
+
+routeType Routes [MAX_ROUTES] = {};
+
+uint8_t routeMode = NORMAL_MODE;
 
 #endif //VARS_H

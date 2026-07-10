@@ -46,4 +46,9 @@
 
 #define FORMAT_LITTLEFS_IF_FAILED true
 
+// routes defines
+#define MAX_ROUTE_LOCATION 20
+#define MAX_ROUTES 50
+
+
 #endif // DEFINES_H
