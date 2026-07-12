@@ -35,12 +35,25 @@ void action_config_button(lv_event_t * e)
   int pressedButton = *((int*)(&user_data));
   switch(pressedButton)
   {
-
-//#ifndef ESP32DIS06043H
+    case 25:                             // get turntables
+      if (WiFi.status() != WL_CONNECTED)
+       {
+        lv_label_set_text(objects.lbl_config, "#FF0000 Not connected to CS");
+        return;
+       }
+      break;
+    case 26:                             // get turnouts
+      if (WiFi.status() != WL_CONNECTED)
+       {
+        lv_label_set_text(objects.lbl_config, "#FF0000 Not connected to CS");
+        return;
+       }
+      
+      break;
     case (27):              //Retreive EX-Rail Roster 
       if (WiFi.status() != WL_CONNECTED)
        {
-        lv_label_set_text(objects.lbl_roster, "Not connected to CS");
+        lv_label_set_text(objects.lbl_config, "#FF0000 Not connected to CS");
         return;
        }
       //First Clear the Roster
@@ -57,22 +70,21 @@ void action_config_button(lv_event_t * e)
           strcpy(funcName[i][f], " ");
         }
       }
-      lv_label_set_text(objects.lbl_roster,"Sending List Request");
-//      setupExrailRoster();
+      lv_label_set_text(objects.lbl_config,"Sending List Request");
       dccexProtocol.getLists(true,false,false,false);
-      lv_label_set_text(objects.lbl_roster,"Roster updated");
+      lv_label_set_text(objects.lbl_config,"Roster updated");
       break;
 
     case (28):              //Reload Local Roster
-      lv_label_set_text(objects.lbl_roster, "Restoring Local Roster");
+      lv_label_set_text(objects.lbl_config, "Restoring Local Roster");
       setupLocalRoster();
-      lv_label_set_text(objects.lbl_roster, "Local Roster Restored");
+      lv_label_set_text(objects.lbl_config, "Local Roster Restored");
       break;
 
     case (29):              //Save EX-Rail Roster to local
       if (WiFi.status() != WL_CONNECTED)
        {
-        lv_label_set_text(objects.lbl_roster, "Not connected to CS");
+        lv_label_set_text(objects.lbl_config, "#FF0000 Not connected to CS");
         return;
        }
       locosDirty = 1;

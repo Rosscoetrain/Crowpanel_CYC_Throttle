@@ -37,6 +37,8 @@ extern void action_scan_button(lv_event_t * e);
 extern void action_fedit_slot(lv_event_t * e);
 extern void action_fclear_slot(lv_event_t * e);
 extern void action_functions_button(lv_event_t * e);
+extern void action_screen_load_cb(lv_event_t * e);
+extern void action_points_button(lv_event_t * e);
 
 
 #ifdef __cplusplus

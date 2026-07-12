@@ -235,4 +235,23 @@ routeType Routes [MAX_ROUTES] = {};
 
 uint8_t routeMode = NORMAL_MODE;
 
+
+// points variables
+
+String pointsLocationArray[MAX_POINTS_LOCATION];
+bool pointsLocationsExist = false;
+
+char pointCurrentLocation[20];
+
+struct pointType {
+  char loc[5];
+  char name[50];
+  uint16_t id;
+  bool status;
+};
+
+pointType Points[MAX_POINTS] = {};
+
+uint8_t pointsMode = NORMAL_MODE;
+
 #endif //VARS_H

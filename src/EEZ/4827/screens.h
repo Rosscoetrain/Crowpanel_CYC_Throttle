@@ -22,6 +22,7 @@ typedef struct _objects_t {
     lv_obj_t *info;
     lv_obj_t *functions;
     lv_obj_t *routes;
+    lv_obj_t *turnouts;
     lv_obj_t *btn_stop;
     lv_obj_t *btn_power;
     lv_obj_t *sw_dir;
@@ -41,6 +42,7 @@ typedef struct _objects_t {
     lv_obj_t *btn_read;
     lv_obj_t *btn_write;
     lv_obj_t *btn_select_routes_1;
+    lv_obj_t *btn_select_points;
     lv_obj_t *lbl_stop;
     lv_obj_t *lbl_power;
     lv_obj_t *obj0;
@@ -188,38 +190,49 @@ typedef struct _objects_t {
     lv_obj_t *obj50;
     lv_obj_t *ta_tft_backlight;
     lv_obj_t *ta_wifi_timeout;
-    lv_obj_t *kbd_config;
     lv_obj_t *obj51;
     lv_obj_t *obj52;
     lv_obj_t *obj53;
-    lv_obj_t *lbl_roster;
-    lv_obj_t *info_button_9;
+    lv_obj_t *lbl_config;
     lv_obj_t *obj54;
-    lv_obj_t *done_button_9;
     lv_obj_t *obj55;
+    lv_obj_t *kbd_config;
+    lv_obj_t *info_button_9;
     lv_obj_t *obj56;
-    lv_obj_t *credits_button_10;
+    lv_obj_t *done_button_9;
     lv_obj_t *obj57;
-    lv_obj_t *done_button_10;
     lv_obj_t *obj58;
+    lv_obj_t *credits_button_10;
     lv_obj_t *obj59;
-    lv_obj_t *cancel_button_9;
+    lv_obj_t *done_button_10;
     lv_obj_t *obj60;
-    lv_obj_t *done_button_19;
     lv_obj_t *obj61;
-    lv_obj_t *desc_button;
+    lv_obj_t *cancel_button_9;
     lv_obj_t *obj62;
+    lv_obj_t *done_button_19;
+    lv_obj_t *obj63;
+    lv_obj_t *desc_button;
+    lv_obj_t *obj64;
     lv_obj_t *func_description;
     lv_obj_t *ex_functions_mtx;
     lv_obj_t *btn_cancel_routes_1;
-    lv_obj_t *obj63;
-    lv_obj_t *obj64;
     lv_obj_t *obj65;
+    lv_obj_t *obj66;
+    lv_obj_t *obj67;
     lv_obj_t *tbl_routes;
-    lv_obj_t *lbl_routes;
     lv_obj_t *dd_location;
     lv_obj_t *btn_load_routes_1;
-    lv_obj_t *obj66;
+    lv_obj_t *obj68;
+    lv_obj_t *lbl_routes;
+    lv_obj_t *btn_cancel_points;
+    lv_obj_t *obj69;
+    lv_obj_t *obj70;
+    lv_obj_t *obj71;
+    lv_obj_t *tbl_points;
+    lv_obj_t *dd_location_points;
+    lv_obj_t *btn_load_points;
+    lv_obj_t *obj72;
+    lv_obj_t *lbl_points;
 } objects_t;
 
 extern objects_t objects;
@@ -239,6 +252,7 @@ enum ScreensEnum {
     SCREEN_ID_INFO = 12,
     SCREEN_ID_FUNCTIONS = 13,
     SCREEN_ID_ROUTES = 14,
+    SCREEN_ID_TURNOUTS = 15,
 };
 
 void create_screen_main();
@@ -282,6 +296,9 @@ void tick_screen_functions();
 
 void create_screen_routes();
 void tick_screen_routes();
+
+void create_screen_turnouts();
+void tick_screen_turnouts();
 
 void tick_screen_by_id(enum ScreensEnum screenId);
 void tick_screen(int screen_index);

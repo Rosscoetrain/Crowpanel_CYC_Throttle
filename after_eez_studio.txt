@@ -1,4 +1,9 @@
+NOT required just for reference now in
+actions_ui_functions.h
+
 add this in screens.c
+
+#include "extra_code/tbl_roster.h"
 
 for //tbl_roster at about line 1370
 
@@ -6,6 +11,7 @@ for //tbl_roster at about line 1370
             lv_table_set_col_width(obj, 0, 200); // Column 0 width = 200 px
             lv_table_set_col_width(obj, 1, 58); // Column 1 width = 58 px
 
+#include "extra_code/tbl_routes.h"
 
 for //tbl_routes at about line 4866
 
@@ -15,12 +21,16 @@ for //tbl_routes at about line 4866
             lv_table_set_col_width(obj, 2, 30); // Column 2 width = 30 px
 
 
+#include "extra_code/lbl_routes.h"
+
 for //lbl_routes at about line 4913
             lv_label_set_recolor(obj, true);
 
 
 
 before //create_screen_routes at about line 4766
+
+#include "extra_code/create_screen_routes_cb.h"
 
 static void screen_event_cb(lv_event_t * e) {
     lv_event_code_t code = lv_event_get_code(e);
@@ -30,6 +40,7 @@ static void screen_event_cb(lv_event_t * e) {
     }
 }
 
+#include "extra_code/create_screen_routes.h"
 
 for //create_screen_routes at about line 4774
     lv_obj_add_event_cb(obj, screen_event_cb, LV_EVENT_SCREEN_LOADED, objects.lbl_routes);

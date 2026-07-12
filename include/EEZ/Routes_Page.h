@@ -123,8 +123,6 @@ void setupExrailRoutes()
    }
   for (int j = 0; j < MAX_ROUTES; j++)
    {
-//    Routes[j].loc = "";
-//    Routes[j].name = "";
     strncpy(Routes[j].loc, "", sizeof(Routes[j].loc) - 1);
     strncpy(Routes[j].name, "", sizeof(Routes[j].name) - 1);
     Routes[j].id = 0;
@@ -210,7 +208,7 @@ void setupExrailRoutes()
       if (routeCount < MAX_ROUTES)
        {
         strncpy(Routes[routeCount].loc, "", sizeof(Routes[routeCount].loc) - 1);
-        strncpy(Routes[routeCount].name, location, sizeof(Routes[routeCount].loc) - 1);
+        strncpy(Routes[routeCount].name, location, sizeof(Routes[routeCount].name) - 1);
         Routes[routeCount].id = id;
         Routes[routeCount].type = type;
        }

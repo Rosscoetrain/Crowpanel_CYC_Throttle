@@ -61,8 +61,10 @@
 
 #include "defines.h"
 #include "vars.h"
+#include "actions_ui_functions.h"
 
 #include "EEZ/Little_FS.h"
+
 
 
 #ifdef RES8048
@@ -99,6 +101,7 @@
 #include "EEZ/Program_Page.h"
 #include "EEZ/Roster_Page.h"
 #include "EEZ/Routes_Page.h"
+#include "EEZ/Points_Page.h"
 #include "EEZ/WiFi_Page.h"
 #include "EEZ/Scan_Page.h"
 

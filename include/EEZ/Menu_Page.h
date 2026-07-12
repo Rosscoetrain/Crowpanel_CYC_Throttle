@@ -64,7 +64,8 @@ static void menu_cb(lv_event_t * e)
         loadScreen(SCREEN_ID_ROSTER);
         break;
       case ACC:
-        loadScreen(SCREEN_ID_ACCESSORIES);
+//        loadScreen(SCREEN_ID_ACCESSORIES);
+        loadScreen(SCREEN_ID_TURNOUTS);
         break;
       case PROGRAM:
         callingPage = SCREEN_ID_MAIN;

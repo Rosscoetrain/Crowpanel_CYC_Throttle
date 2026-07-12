@@ -50,5 +50,8 @@
 #define MAX_ROUTE_LOCATION 20
 #define MAX_ROUTES 50
 
+// points defines
+#define MAX_POINTS_LOCATION 20
+#define MAX_POINTS 50
 
 #endif // DEFINES_H

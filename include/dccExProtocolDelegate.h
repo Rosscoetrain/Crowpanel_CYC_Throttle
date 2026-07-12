@@ -11,6 +11,7 @@
 
 extern void setupExrailRoster();
 extern void setupExrailRoutes();
+extern void setupExrailPoints();
 
 // Delegate class
 class MyDelegate : public DCCEXProtocolDelegate {
@@ -38,7 +39,7 @@ public:
 
   void receivedTurnoutList() override {
     Serial.print("\n\nReceived Turnouts/Points list");
-    Serial.println("\n\n");
+    setupExrailPoints();
   }
 
   void receivedRouteList() override {
