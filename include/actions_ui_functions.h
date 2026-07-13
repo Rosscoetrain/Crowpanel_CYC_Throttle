@@ -51,14 +51,14 @@ void action_screen_load_cb(lv_event_t *e)
   void *user_data = lv_event_get_user_data(e);
   int screen = *((int*)(&user_data));
 
-//  Serial.print("Screen : ");
-//  Serial.println(screen);
+  Serial.print("Screen : ");
+  Serial.println(screen);
 
   if(code == LV_EVENT_SCREEN_LOADED)
    {
     switch (screen)
      {
-      case 0:                                               // 
+      case 0:                                               // spare
         break;
       case 1:                                               // 
         break;
@@ -70,13 +70,15 @@ void action_screen_load_cb(lv_event_t *e)
         break;
       case 4:                                               // 
         break;
-      case 5:                                               // 
+      case 5:                                               // program screen
+        lv_obj_add_flag(objects.kbd_program, LV_OBJ_FLAG_HIDDEN);
         break;
       case 6:                                               // 
         break;
       case 7:                                               // 
         break;
-      case 8:                                               // 
+      case 8:                                                // wifi
+        lv_label_set_recolor(objects.lbl_wifi_status, true); // allows colouring of text
         break;
       case 9:                                               // 
         break;
@@ -103,6 +105,11 @@ void action_screen_load_cb(lv_event_t *e)
         lv_table_set_col_width(objects.tbl_routes, 1, 59);  // Column 1 width = 58 px
         lv_table_set_col_width(objects.tbl_routes, 2, 50);  // Column 2 width = 30 px
 #endif
+#ifdef RES8048_LS                                           // total width 624 px
+        lv_table_set_col_width(objects.tbl_routes, 0, 490); // Column 0 width = 490 px
+        lv_table_set_col_width(objects.tbl_routes, 1, 64);  // Column 1 width = 64 px
+        lv_table_set_col_width(objects.tbl_routes, 2, 70);  // Column 2 width = 70 px
+#endif
         break;
       case 15:                                              // points screen
         lv_label_set_text(objects.lbl_points, "");          // Clears the label's text
@@ -112,10 +119,15 @@ void action_screen_load_cb(lv_event_t *e)
         lv_table_set_col_width(objects.tbl_points, 1, 50);  // Column 1 width = 28 px
         lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 60 px
 #endif
-#ifdef RES8048
-        lv_table_set_col_width(objects.tbl_points, 0, 330); // Column 0 width = 170 px
-        lv_table_set_col_width(objects.tbl_points, 1, 59);  // Column 1 width = 28 px
-        lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 60 px
+#ifdef RES8048                                              // total width 
+        lv_table_set_col_width(objects.tbl_points, 0, 330); // Column 0 width = 330 px
+        lv_table_set_col_width(objects.tbl_points, 1, 59);  // Column 1 width = 59 px
+        lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 70 px
+#endif
+#ifdef RES8048_LS                                           // total width 624 px
+        lv_table_set_col_width(objects.tbl_points, 0, 490); // Column 0 width = 490 px
+        lv_table_set_col_width(objects.tbl_points, 1, 64);  // Column 1 width = 64 px
+        lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 70 px
 #endif
         break;
       default:

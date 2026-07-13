@@ -291,8 +291,9 @@ void action_throttle_button(lv_event_t * e)
       loadScreen(SCREEN_ID_ROSTER);
       break;
     case 32:    //Acc
-//      callingPage = SCREEN_ID_THROTTLE;
+      callingPage = SCREEN_ID_THROTTLE;
 //      loadScreen(SCREEN_ID_ACCESSORIES);
+      loadScreen(SCREEN_ID_TURNOUTS);
       break;
     default:
       break;

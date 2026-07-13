@@ -74,7 +74,8 @@ void action_points_button(lv_event_t * e)
       break;
 
     case 30:       //Return to Calling Page
-      loadScreen(SCREEN_ID_MAIN);
+//      loadScreen(SCREEN_ID_MAIN);
+      loadScreen(callingPage);
       break;
     case 31:       //Load points from Exrail
       if (WiFi.status() != WL_CONNECTED)

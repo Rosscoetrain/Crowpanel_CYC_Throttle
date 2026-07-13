@@ -102,7 +102,7 @@ void action_wifi_button(lv_event_t * e)
         timeOut = timeOut -1;
         if(timeOut <0)
         {
-          lv_label_set_text(objects.lbl_wifi_status, "Timeout trying to Connect...");
+          lv_label_set_text(objects.lbl_wifi_status, "#FF0000 Timeout trying to Connect...");
           lv_img_set_src(objects.img_wifi, &img_x);
           lv_label_set_text(objects.lbl_ps2,"");
           break;
