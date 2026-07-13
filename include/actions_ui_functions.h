@@ -40,14 +40,19 @@
 #include "EEZ/8048/actions.h"
 #endif
 
+#ifdef RES8048_LS
+#include "EEZ/8048_landscape/actions.h"
+#endif
+
+
 void action_screen_load_cb(lv_event_t *e)
  {
   lv_event_code_t code = lv_event_get_code(e);
   void *user_data = lv_event_get_user_data(e);
   int screen = *((int*)(&user_data));
 
-  Serial.print("Screen : ");
-  Serial.println(screen);
+//  Serial.print("Screen : ");
+//  Serial.println(screen);
 
   if(code == LV_EVENT_SCREEN_LOADED)
    {
@@ -103,13 +108,13 @@ void action_screen_load_cb(lv_event_t *e)
         lv_label_set_text(objects.lbl_points, "");          // Clears the label's text
         lv_label_set_recolor(objects.lbl_points, true);     // allows colouring of text
 #ifdef RES4827
-        lv_table_set_col_width(objects.tbl_points, 0, 350); // Column 0 width = 170 px
-        lv_table_set_col_width(objects.tbl_points, 1, 39);  // Column 1 width = 28 px
+        lv_table_set_col_width(objects.tbl_points, 0, 138); // Column 0 width = 170 px
+        lv_table_set_col_width(objects.tbl_points, 1, 50);  // Column 1 width = 28 px
         lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 60 px
 #endif
 #ifdef RES8048
-        lv_table_set_col_width(objects.tbl_points, 0, 138); // Column 0 width = 170 px
-        lv_table_set_col_width(objects.tbl_points, 1, 50);  // Column 1 width = 28 px
+        lv_table_set_col_width(objects.tbl_points, 0, 330); // Column 0 width = 170 px
+        lv_table_set_col_width(objects.tbl_points, 1, 59);  // Column 1 width = 28 px
         lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 60 px
 #endif
         break;

@@ -17,13 +17,16 @@ typedef struct _objects_t {
     lv_obj_t *roster;
     lv_obj_t *edit_loco;
     lv_obj_t *program;
+    lv_obj_t *accessories;
+    lv_obj_t *edit_acc;
     lv_obj_t *wi_fi;
     lv_obj_t *scan;
     lv_obj_t *config;
     lv_obj_t *credits;
     lv_obj_t *info;
-    lv_obj_t *accessories;
-    lv_obj_t *edit_acc;
+    lv_obj_t *functions;
+    lv_obj_t *routes;
+    lv_obj_t *turnouts;
     lv_obj_t *btn_stop;
     lv_obj_t *btn_power;
     lv_obj_t *sw_dir;
@@ -52,6 +55,8 @@ typedef struct _objects_t {
     lv_obj_t *btn_s9;
     lv_obj_t *btn_read;
     lv_obj_t *btn_write;
+    lv_obj_t *btn_select_routes_1;
+    lv_obj_t *btn_select_points;
     lv_obj_t *btn_home;
     lv_obj_t *obj0;
     lv_obj_t *lbl_stop;
@@ -155,76 +160,102 @@ typedef struct _objects_t {
     lv_obj_t *lbl_ps1;
     lv_obj_t *lbl_ps2;
     lv_obj_t *kbd_program;
-    lv_obj_t *btn_wifi_select;
     lv_obj_t *obj29;
-    lv_obj_t *btn_wifi_scan;
+    lv_obj_t *info_button_17;
     lv_obj_t *obj30;
-    lv_obj_t *config_button_wi_fi;
+    lv_obj_t *credits_button_8;
     lv_obj_t *obj31;
-    lv_obj_t *retry_button_wi_fi;
     lv_obj_t *obj32;
-    lv_obj_t *done_button_wi_fi;
+    lv_obj_t *info_button_18;
     lv_obj_t *obj33;
+    lv_obj_t *credits_button_9;
     lv_obj_t *obj34;
+    lv_obj_t *btn_wifi_select;
+    lv_obj_t *obj35;
+    lv_obj_t *btn_wifi_scan;
+    lv_obj_t *obj36;
+    lv_obj_t *config_button_wi_fi;
+    lv_obj_t *obj37;
+    lv_obj_t *retry_button_wi_fi;
+    lv_obj_t *obj38;
+    lv_obj_t *done_button_wi_fi;
+    lv_obj_t *obj39;
+    lv_obj_t *obj40;
     lv_obj_t *ta_password;
     lv_obj_t *ta_ip_address;
     lv_obj_t *ta_port;
     lv_obj_t *dd_ssids;
-    lv_obj_t *obj35;
+    lv_obj_t *obj41;
     lv_obj_t *btn_connect;
-    lv_obj_t *obj36;
+    lv_obj_t *obj42;
     lv_obj_t *btn_wifi_pg_save;
-    lv_obj_t *obj37;
+    lv_obj_t *obj43;
     lv_obj_t *btn_wifi_pg_enable;
-    lv_obj_t *obj38;
+    lv_obj_t *obj44;
     lv_obj_t *ta_ssid;
     lv_obj_t *lbl_wifi_status;
     lv_obj_t *lbl_wifi_status2;
     lv_obj_t *kb_alpha;
     lv_obj_t *kb_numeric;
-    lv_obj_t *obj39;
+    lv_obj_t *obj45;
     lv_obj_t *list_scan_pg_ssids;
     lv_obj_t *credits_button_16;
-    lv_obj_t *obj40;
+    lv_obj_t *obj46;
     lv_obj_t *info_button_16;
-    lv_obj_t *obj41;
+    lv_obj_t *obj47;
     lv_obj_t *txt_scan_status;
     lv_obj_t *credits_button_7;
-    lv_obj_t *obj42;
-    lv_obj_t *tips_button_7;
-    lv_obj_t *obj43;
-    lv_obj_t *info_button_7;
-    lv_obj_t *obj44;
-    lv_obj_t *obj45;
-    lv_obj_t *obj46;
-    lv_obj_t *obj47;
-    lv_obj_t *ta_tft_backlight;
-    lv_obj_t *ta_wifi_timeout;
     lv_obj_t *obj48;
+    lv_obj_t *tips_button_7;
     lv_obj_t *obj49;
+    lv_obj_t *info_button_7;
     lv_obj_t *obj50;
-    lv_obj_t *lbl_roster;
-    lv_obj_t *kbd_config;
-    lv_obj_t *credits_button_13;
     lv_obj_t *obj51;
-    lv_obj_t *info_button_13;
     lv_obj_t *obj52;
     lv_obj_t *obj53;
-    lv_obj_t *credits_button_14;
+    lv_obj_t *ta_tft_backlight;
+    lv_obj_t *ta_wifi_timeout;
     lv_obj_t *obj54;
-    lv_obj_t *info_button_14;
     lv_obj_t *obj55;
     lv_obj_t *obj56;
+    lv_obj_t *lbl_config;
+    lv_obj_t *kbd_config;
+    lv_obj_t *credits_button_13;
     lv_obj_t *obj57;
-    lv_obj_t *info_button_17;
+    lv_obj_t *info_button_13;
     lv_obj_t *obj58;
-    lv_obj_t *credits_button_8;
     lv_obj_t *obj59;
+    lv_obj_t *credits_button_14;
     lv_obj_t *obj60;
-    lv_obj_t *info_button_18;
+    lv_obj_t *info_button_14;
     lv_obj_t *obj61;
-    lv_obj_t *credits_button_9;
     lv_obj_t *obj62;
+    lv_obj_t *cancel_button_9;
+    lv_obj_t *obj63;
+    lv_obj_t *done_button_19;
+    lv_obj_t *obj64;
+    lv_obj_t *desc_button;
+    lv_obj_t *obj65;
+    lv_obj_t *func_description;
+    lv_obj_t *ex_functions_mtx;
+    lv_obj_t *btn_cancel_routes_1;
+    lv_obj_t *obj66;
+    lv_obj_t *obj67;
+    lv_obj_t *obj68;
+    lv_obj_t *tbl_routes;
+    lv_obj_t *dd_location;
+    lv_obj_t *btn_load_routes_1;
+    lv_obj_t *obj69;
+    lv_obj_t *lbl_routes;
+    lv_obj_t *btn_cancel_points;
+    lv_obj_t *obj70;
+    lv_obj_t *obj71;
+    lv_obj_t *obj72;
+    lv_obj_t *tbl_points;
+    lv_obj_t *dd_location_points;
+    lv_obj_t *btn_load_points;
+    lv_obj_t *obj73;
+    lv_obj_t *lbl_points;
 } objects_t;
 
 extern objects_t objects;
@@ -235,13 +266,16 @@ enum ScreensEnum {
     SCREEN_ID_ROSTER = 3,
     SCREEN_ID_EDIT_LOCO = 4,
     SCREEN_ID_PROGRAM = 5,
-    SCREEN_ID_WI_FI = 6,
-    SCREEN_ID_SCAN = 7,
-    SCREEN_ID_CONFIG = 8,
-    SCREEN_ID_CREDITS = 9,
-    SCREEN_ID_INFO = 10,
-    SCREEN_ID_ACCESSORIES = 11,
-    SCREEN_ID_EDIT_ACC = 12,
+    SCREEN_ID_ACCESSORIES = 6,
+    SCREEN_ID_EDIT_ACC = 7,
+    SCREEN_ID_WI_FI = 8,
+    SCREEN_ID_SCAN = 9,
+    SCREEN_ID_CONFIG = 10,
+    SCREEN_ID_CREDITS = 11,
+    SCREEN_ID_INFO = 12,
+    SCREEN_ID_FUNCTIONS = 13,
+    SCREEN_ID_ROUTES = 14,
+    SCREEN_ID_TURNOUTS = 15,
 };
 
 void create_screen_main();
@@ -259,6 +293,12 @@ void tick_screen_edit_loco();
 void create_screen_program();
 void tick_screen_program();
 
+void create_screen_accessories();
+void tick_screen_accessories();
+
+void create_screen_edit_acc();
+void tick_screen_edit_acc();
+
 void create_screen_wi_fi();
 void tick_screen_wi_fi();
 
@@ -274,11 +314,14 @@ void tick_screen_credits();
 void create_screen_info();
 void tick_screen_info();
 
-void create_screen_accessories();
-void tick_screen_accessories();
+void create_screen_functions();
+void tick_screen_functions();
 
-void create_screen_edit_acc();
-void tick_screen_edit_acc();
+void create_screen_routes();
+void tick_screen_routes();
+
+void create_screen_turnouts();
+void tick_screen_turnouts();
 
 void tick_screen_by_id(enum ScreensEnum screenId);
 void tick_screen(int screen_index);

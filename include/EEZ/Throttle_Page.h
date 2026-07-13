@@ -332,7 +332,7 @@ void setLocoRev()
   }
 }
 
-#if defined ESP32DIS06043H || defined ESP32DIS08070H || defined ESP32DIS02170A
+//#if defined ESP32DIS06043H || defined ESP32DIS08070H || defined ESP32DIS02170A
 
 void action_functions_button(lv_event_t * e)
 {
@@ -407,6 +407,6 @@ static void ex_functions_cb(lv_event_t * e)
   }
 }
 
-#endif
+//#endif
 #endif  // THROTTLE_PAGE_H
 
