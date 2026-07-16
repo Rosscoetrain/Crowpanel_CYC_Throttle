@@ -32,7 +32,8 @@
 #define SPEED_LEN 3
 //#define DIR_LEN 1
 #define FNUM_LEN 3
-#define FNAME_LEN 10
+#define FNAME_LEN 12
+
 
 #define NORMAL_MODE 0
 #define EDIT_MODE 1

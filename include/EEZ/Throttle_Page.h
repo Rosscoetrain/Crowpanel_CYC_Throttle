@@ -49,6 +49,18 @@ void populateLocoDetails()
       if(val != 255)
       {
         btnMap_functions[map_xlate[i]] = funcName[activeLocoID][i];
+
+        Serial.print("Loading buttons ");
+        Serial.print("funcName: ");
+        Serial.println(btnMap_functions[map_xlate[i]]);
+
+        Serial.print("funcName length : ");
+        Serial.println(strlen(btnMap_functions[map_xlate[i]]));
+
+        Serial.print("func_xlate : ");
+        Serial.println(func_xlate[i]);
+
+
         lv_btnmatrix_clear_btn_ctrl(objects.function_mtx, func_xlate[i], LV_BTNMATRIX_CTRL_HIDDEN);
         if(funcState[activeLocoID][i] == 1)
         { 

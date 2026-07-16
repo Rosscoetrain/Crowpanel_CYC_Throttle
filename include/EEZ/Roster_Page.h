@@ -168,7 +168,8 @@ void setupExrailRoster()
           Serial.print(" - Momentary");
         }
         strcpy(funcNumber[id][slot], funcNum.c_str());
-        strcpy(funcName[id][slot], fName);
+//        strcpy(funcName[id][slot], fName);
+        strncpy(funcName[id][slot], fName, FNAME_LEN);
         funcOption[id][slot] = loco->isFunctionMomentary(i);                                             //0= Function | Momentary, 1=image
         Serial.printf(" slot; %d", slot);
 
