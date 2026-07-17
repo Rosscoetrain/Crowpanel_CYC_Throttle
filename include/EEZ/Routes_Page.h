@@ -24,12 +24,13 @@ void action_routes_button(lv_event_t * e)
     case 31:       //Load routes from exrail
       if (WiFi.status() != WL_CONNECTED)
        {
-        lv_label_set_text(objects.lbl_routes, "#FF0000 Not connected to CS");
+        lv_label_set_text_static(objects.lbl_routes, "#FF0000 Not connected to CS");
         return;
        }
       else
        {
-        lv_label_set_text(objects.lbl_routes, "");
+//        lv_label_set_text_static(objects.lbl_routes, "");
+        lv_label_set_text_static(objects.lbl_routes, "#0000FF Loading routes and automations");
        }
       Serial.println("Loading routes");
       dccexProtocol.getLists(false,false,true,false);
@@ -48,7 +49,7 @@ void action_routes_button(lv_event_t * e)
 static void tbl_route_cb(lv_event_t * e)
  {
   lv_obj_t * obj = lv_event_get_target(e);
-  lv_label_set_text(objects.lbl_routes, "");
+  lv_label_set_text_static(objects.lbl_routes, "");
   uint16_t col;
   uint16_t row;
   lv_table_get_selected_cell(obj, &row, &col);
@@ -91,7 +92,7 @@ static void tbl_route_cb(lv_event_t * e)
        }
       else
        {
-        lv_label_set_text(objects.lbl_routes, "#FF0000 No active locomotive");
+        lv_label_set_text_static(objects.lbl_routes, "#FF0000 No active locomotive");
        }
      }
    }
@@ -128,6 +129,7 @@ void setupExrailRoutes()
     Routes[j].id = 0;
     Routes[j].type = RouteTypeRoute;
    }
+  lv_label_ins_text(objects.lbl_routes, LV_LABEL_POS_LAST, " .");
 
   for (Route *route = dccexProtocol.routes->getFirst(); route; route = route->getNext()) {
     id = route->getId();
@@ -221,6 +223,8 @@ void setupExrailRoutes()
 
     i++;
    }
+
+  lv_label_set_text_static(objects.lbl_routes, "");
 
   Serial.println("\n");
 

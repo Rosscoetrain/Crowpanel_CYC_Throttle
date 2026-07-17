@@ -33,28 +33,44 @@ static void tbl_points_cb(lv_event_t * e)
   lv_table_get_selected_cell(obj, &row, &col);
   Serial.printf("Selected Roster Row = %d, Col = %d\n", row, col);
 
-//  if(pointsMode == SELECT_MODE)
+  if(col == 2)
    {
 //    pointsMode = NORMAL_MODE;
-    lv_obj_clear_state(objects.btn_select_points, LV_STATE_CHECKED);
+//    lv_obj_clear_state(objects.btn_select_points, LV_STATE_CHECKED);
     Serial.print("Changing point :");
     const char *id_text = lv_table_get_cell_value(objects.tbl_points, row, 1);
-    int id = std::stoi(id_text);
-    const char *status_text = lv_table_get_cell_value(objects.tbl_points, row, 2);
-    Serial.print("Location Point id :");
-    Serial.println(id);
-    Serial.print("Location Point status :");
-    Serial.println(status_text);
 
-    if (strcmp(status_text, "closed") == 0)
+// Check if the pointer is null or the string is empty
+    if (id_text == nullptr || id_text[0] == '\0')
      {
-      dccexProtocol.throwTurnout(id);
-      lv_table_set_cell_value(objects.tbl_points, row, 2, "thrown");
+    // Handle the missing value case here
+//      id = -1;
+      return;
      }
     else
      {
-      dccexProtocol.closeTurnout(id);
-      lv_table_set_cell_value(objects.tbl_points, row, 2, "closed");
+    // Safe to convert now
+      int id = std::stoi(id_text);
+    
+    // Process status next
+      const char *status_text = lv_table_get_cell_value(objects.tbl_points, row, 2);
+
+      Serial.println(id_text);
+      Serial.print("Location Point id :");
+      Serial.println(id);
+      Serial.print("Location Point status :");
+      Serial.println(status_text);
+
+      if (strcmp(status_text, "closed") == 0)
+       {
+        dccexProtocol.throwTurnout(id);
+        lv_table_set_cell_value(objects.tbl_points, row, 2, "Thrown");
+       }
+      else
+       {
+        dccexProtocol.closeTurnout(id);
+        lv_table_set_cell_value(objects.tbl_points, row, 2, "Closed");
+       }
      }
    }
  }
@@ -80,12 +96,12 @@ void action_points_button(lv_event_t * e)
     case 31:       //Load points from Exrail
       if (WiFi.status() != WL_CONNECTED)
        {
-        lv_label_set_text(objects.lbl_points, "#FF0000 Not connected to CS");
+        lv_label_set_text_static(objects.lbl_points, "#FF0000 Not connected to CS");
         return;
        }
       else
        {
-        lv_label_set_text(objects.lbl_points, "");
+        lv_label_set_text_static(objects.lbl_points, "#0000FF Loading points");
        }
       Serial.println("Loading points");
       dccexProtocol.getLists(false,true,false,false);
@@ -93,12 +109,12 @@ void action_points_button(lv_event_t * e)
     case 32:       //Select 
       if (WiFi.status() != WL_CONNECTED)
        {
-        lv_label_set_text(objects.lbl_points, "#FF0000 Not connected to CS");
+        lv_label_set_text_static(objects.lbl_points, "#FF0000 Not connected to CS");
         return;
        }
       else
        {
-        lv_label_set_text(objects.lbl_points, "");
+        lv_label_set_text_static(objects.lbl_points, "");
        }
       lv_obj_clear_state(objects.btn_select_points, LV_STATE_CHECKED);
       pointsMode = SELECT_MODE;
@@ -236,6 +252,8 @@ void setupExrailPoints()
 
     i++;
    }
+
+  lv_label_set_text_static(objects.lbl_points, "");
 
   Serial.println("\n");
   pointsMode = NORMAL_MODE;

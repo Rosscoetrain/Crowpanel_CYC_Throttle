@@ -682,6 +682,8 @@ void saveCredentials(fs::FS &fs, const char * path, const char * message)
 //
 void saveLittleFS()
 {
+  // Pause the LVGL timer handler right before filesystem access
+  lv_timer_enable(false); 
   if(locosDirty == 1) saveLocos(LittleFS, "/locos.new", "ID,LongName, Address\n");
   if(functionsDirty == 1) saveFunctions(LittleFS, "/functions.new", "LocoID,Function,Name,Slot,Momentary\n");
   if(throttlesDirty == 1) saveThrottles(LittleFS, "/throttleids.new", "Throttle,Slot,LocoID\n");
@@ -689,6 +691,8 @@ void saveLittleFS()
 //  if(routesDirty == 1) saveRoutes(LittleFS, "/routes.new", "ID,Acc1,State1,Acc2,State2,Acc3,State3,Acc4,State4,Acc5,State5,Acc6,State6\n");
   if(credentialsDirty == 1) saveCredentials(LittleFS, "/credentials.new", "ID,SSID,Password,IPAddress,Port\n");
   Serial.println("All Updated Files Saved");
+  // Resume rendering once the SPI bus is free
+  lv_timer_enable(true); 
 }
 
 

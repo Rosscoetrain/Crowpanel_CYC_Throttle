@@ -35,8 +35,8 @@ void populateLocoDetails()
     lv_slider_set_value(objects.slider, locoSpeed[activeLocoID], LV_ANIM_OFF);
     char speedString[10] = "";
     itoa(locoSpeed[activeLocoID], speedString, 10);
-    lv_label_set_text(objects.lbl_slider,speedString);                    //Update the speed label to the previously set speed value
-    lv_label_set_text(objects.lbl_address, locoAddress[activeLocoID]);                    //Update the address label to the previously set address
+    lv_label_set_text_static(objects.lbl_slider,speedString);                    //Update the speed label to the previously set speed value
+    lv_label_set_text_static(objects.lbl_address, locoAddress[activeLocoID]);                    //Update the address label to the previously set address
 
     //Setup the Direction
     if(locoDir[activeLocoID] == 1)
@@ -86,7 +86,7 @@ void populateLocoDetails()
 void populateThrottle()
 {
   lv_dropdown_clear_options(objects.dd_locos);                          //Clear the previous list
-  lv_label_set_text(objects.lbl_throttle_page,throttleName[activeThrottle]);        //Update the page heading
+  lv_label_set_text_static(objects.lbl_throttle_page,throttleName[activeThrottle]);        //Update the page heading
   activeLocoID = selectedIDs[activeThrottle][activeSlot[activeThrottle]];
   for(int i = 0; i < NUM_LOCO_SLOTS; i++)
   {
@@ -180,7 +180,7 @@ void setSpeed(uint16_t locoAddr, uint16_t newSpeed, uint8_t newDir)
   char speedString[10] = "";
   itoa(newSpeed, speedString, 10);
   lv_slider_set_value(objects.slider, newSpeed, LV_ANIM_OFF);
-  lv_label_set_text(objects.lbl_slider,speedString);
+  lv_label_set_text_static(objects.lbl_slider,speedString);
   String speedCMD = ("<t " + String(locoAddr) + " "
          + speedString + " " + String(newDir) + ">");
   Serial.println(speedCMD);
@@ -200,8 +200,8 @@ void action_throttle_button(lv_event_t * e)
       rosterMode = GUEST_ACTIVE;
       lv_obj_clear_flag(objects.kbd_guest, LV_OBJ_FLAG_HIDDEN);
       lv_slider_set_value(objects.slider, 0, LV_ANIM_OFF);
-      lv_label_set_text(objects.lbl_slider,"0");
-      lv_label_set_text(objects.lbl_address, lv_textarea_get_text(objects.ta_guest_address));
+      lv_label_set_text_static(objects.lbl_slider,"0");
+      lv_label_set_text_static(objects.lbl_address, lv_textarea_get_text(objects.ta_guest_address));
       for(int i = 0; i < NUM_FUNC_SLOTS; i++)
       {
         lv_btnmatrix_set_btn_ctrl(objects.function_mtx, func_xlate[i], LV_BTNMATRIX_CTRL_HIDDEN);        
@@ -386,8 +386,8 @@ static void ex_functions_cb(lv_event_t * e)
 //        std::string s = std::to_string(fNum);
 //        s = "Function Pressed: F" + s;
 //        const char* fDesc = s.c_str();
-//        lv_label_set_text(objects.func_description, fDesc);
-        lv_label_set_text(objects.func_description, funcName[activeLocoID][fNum]);
+//        lv_label_set_text_static(objects.func_description, fDesc);
+        lv_label_set_text_static(objects.func_description, funcName[activeLocoID][fNum]);
 
 
 //        if(funcState[activeLocoID][fslot] == 1) funcState[activeLocoID][fslot] = 0;
@@ -403,7 +403,7 @@ static void ex_functions_cb(lv_event_t * e)
       if(lv_obj_get_state(objects.desc_button) == LV_STATE_CHECKED)
       {
         Serial.printf("Function Released: %d\n", fNum);
-        lv_label_set_text(objects.func_description, "");
+        lv_label_set_text_static(objects.func_description, "");
         lv_btnmatrix_clear_btn_ctrl(obj, fNum, LV_BTNMATRIX_CTRL_CHECKED);
  //       if(funcOption[activeLocoID][fslot] == 1)
  //       {

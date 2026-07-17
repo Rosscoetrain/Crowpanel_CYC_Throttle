@@ -83,7 +83,7 @@ void action_screen_load_cb(lv_event_t *e)
       case 9:                                               // 
         break;
       case 10:                                              // config
-        lv_label_set_text(objects.lbl_config, "");          // Clears the label's text
+        lv_label_set_text_static(objects.lbl_config, "");   // Clears the label's text
         lv_label_set_recolor(objects.lbl_config, true);     // allows colouring of text
         break;
       case 11:                                              // 
@@ -93,7 +93,7 @@ void action_screen_load_cb(lv_event_t *e)
       case 13:                                              // 
         break;
       case 14:                                              // routes screen
-        lv_label_set_text(objects.lbl_routes, "");          // Clears the label's text
+        lv_label_set_text_static(objects.lbl_routes, "");   // Clears the label's text
         lv_label_set_recolor(objects.lbl_routes, true);     // allows colouring of text
 #ifdef RES4827
         lv_table_set_col_width(objects.tbl_routes, 0, 170); // Column 0 width = 170 px
@@ -112,7 +112,7 @@ void action_screen_load_cb(lv_event_t *e)
 #endif
         break;
       case 15:                                              // points screen
-        lv_label_set_text(objects.lbl_points, "");          // Clears the label's text
+        lv_label_set_text_static(objects.lbl_points, "");          // Clears the label's text
         lv_label_set_recolor(objects.lbl_points, true);     // allows colouring of text
 #ifdef RES4827
         lv_table_set_col_width(objects.tbl_points, 0, 138); // Column 0 width = 170 px
@@ -125,9 +125,9 @@ void action_screen_load_cb(lv_event_t *e)
         lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 70 px
 #endif
 #ifdef RES8048_LS                                           // total width 624 px
-        lv_table_set_col_width(objects.tbl_points, 0, 490); // Column 0 width = 490 px
+        lv_table_set_col_width(objects.tbl_points, 0, 460); // Column 0 width = 460 px
         lv_table_set_col_width(objects.tbl_points, 1, 64);  // Column 1 width = 64 px
-        lv_table_set_col_width(objects.tbl_points, 2, 70);  // Column 2 width = 70 px
+        lv_table_set_col_width(objects.tbl_points, 2, 100);  // Column 2 width = 100 px
 #endif
         break;
       default:

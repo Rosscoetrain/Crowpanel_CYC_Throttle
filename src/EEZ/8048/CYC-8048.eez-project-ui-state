@@ -218,8 +218,7 @@
                   },
                   "icon": "material:settings"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -239,7 +238,8 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -1620,7 +1620,9 @@
         "0": {
           "1": {},
           "2": {},
-          "3": {},
+          "3": {
+            "$selected": true
+          },
           "4": {},
           "6": {},
           "8": {}
@@ -1674,7 +1676,7 @@
   "showComponentDescriptions": true,
   "logsPanelFilter": "all",
   "selectedStylePropertyName": "",
-  "lvglPart": "MAIN",
+  "lvglPart": "ITEMS",
   "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [
     "TEXT"

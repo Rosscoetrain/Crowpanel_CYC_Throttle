@@ -35,20 +35,20 @@ void action_general_button(lv_event_t * e)
           setSpeed(atoi(locoAddress[i]), locoSpeed[i], locoDir[i]);
         }
       }
-      lv_label_set_text(objects.lbl_stop, "Go");
+      lv_label_set_text_static(objects.lbl_stop, "Go");
       lv_obj_add_state(objects.slider, LV_STATE_DISABLED);
       break;
     case 2: 
-      lv_label_set_text(objects.lbl_stop, "Stop");
+      lv_label_set_text_static(objects.lbl_stop, "Stop");
       lv_obj_clear_state(objects.slider, LV_STATE_DISABLED);
       break;
     case 3: 
-      lv_label_set_text(objects.lbl_power, "Power On");
+      lv_label_set_text_static(objects.lbl_power, "Power On");
       if(!client.print("<0>")) lv_img_set_src(objects.img_wifi, &img_x);
       break;
     case 4:
       Serial.println("Power On Pressed");
-      lv_label_set_text(objects.lbl_power, "Power Off");
+      lv_label_set_text_static(objects.lbl_power, "Power Off");
       if(!client.print("<1 JOIN>")) lv_img_set_src(objects.img_wifi, &img_x);
       break;
     case 5:

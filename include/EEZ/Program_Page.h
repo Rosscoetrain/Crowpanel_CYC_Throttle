@@ -37,7 +37,7 @@ void action_program_button(lv_event_t * e)
       if(trackSel != 1) 
       {
         trackSel = 1;
-        lv_label_set_text(objects.lbl_ps1, "Program Track Forced!");
+        lv_label_set_text_static(objects.lbl_ps1, "Program Track Forced!");
 //        lv_obj_clear_state(objects.btn_read, LV_STATE_CHECKED);
 //        break;
       }
@@ -45,14 +45,14 @@ void action_program_button(lv_event_t * e)
       {
 //        Serial.printf("Reading CV: %s\n", lv_textarea_get_text(objects.ta_cvn));
 //        Serial.println("<R " + String(lv_textarea_get_text(objects.ta_cvn)) + ">");
-        lv_label_set_text(objects.lbl_ps1, "Reading CV...");
+        lv_label_set_text_static(objects.lbl_ps1, "Reading CV...");
         if(!client.print("<R " + String(lv_textarea_get_text(objects.ta_cvn)) + ">"))
         {
-          lv_label_set_text(objects.lbl_ps2, "Not connected to DCC-EX!");
+          lv_label_set_text_static(objects.lbl_ps2, "Not connected to DCC-EX!");
           lv_obj_clear_state(objects.btn_read, LV_STATE_CHECKED);
         }else
         {
-          lv_label_set_text(objects.lbl_ps2, "Waiting for DCC-EX");
+          lv_label_set_text_static(objects.lbl_ps2, "Waiting for DCC-EX");
           replyExpected = 1;
         }
       }else
@@ -60,16 +60,16 @@ void action_program_button(lv_event_t * e)
 //        Serial.println("Reading CV 1");
 //        lv_textarea_set_text(objects.ta_cvn, "1");
         lv_obj_clear_flag(objects.ta_adr, LV_OBJ_FLAG_HIDDEN);
-        lv_label_set_text(objects.lbl_ps1, "Reading Address");
+        lv_label_set_text_static(objects.lbl_ps1, "Reading Address");
         if(!client.print("<R>"))
         {
-          lv_label_set_text(objects.lbl_ps2, "Not connected to DCC-EX!");
+          lv_label_set_text_static(objects.lbl_ps2, "Not connected to DCC-EX!");
           lv_img_set_src(objects.img_wifi, &img_x);
           lv_obj_clear_state(objects.btn_read, LV_STATE_CHECKED);
           replyExpected = 0;
           break;
         }
-        lv_label_set_text(objects.lbl_ps2, "Waiting for DCC-EX");
+        lv_label_set_text_static(objects.lbl_ps2, "Waiting for DCC-EX");
         replyExpected = 1;
       }
       break;
@@ -80,29 +80,29 @@ void action_program_button(lv_event_t * e)
         {
           if(String(lv_textarea_get_text(objects.ta_adr)) != "")
           {
-            lv_label_set_text(objects.lbl_ps1, "Value Sent to Main Track");
+            lv_label_set_text_static(objects.lbl_ps1, "Value Sent to Main Track");
 //            Serial.println("<w " + String(lv_textarea_get_text(objects.ta_adr)) + " " + String(lv_textarea_get_text(objects.ta_cvn)) + " " + String(lv_textarea_get_text(objects.ta_cvv)) + ">");
             client.print("<w " + String(lv_textarea_get_text(objects.ta_adr)) + " " + String(lv_textarea_get_text(objects.ta_cvn)) + " " + String(lv_textarea_get_text(objects.ta_cvv)) + ">");
           }else
           {
-            lv_label_set_text(objects.lbl_ps1, "Address needed for Main Track");
+            lv_label_set_text_static(objects.lbl_ps1, "Address needed for Main Track");
             lv_obj_clear_state(objects.btn_write, LV_STATE_CHECKED);
             break;
           }
         }else if(trackSel == 1)
         {
-          lv_label_set_text(objects.lbl_ps1, "Value Sent to Prog Track");
-          lv_label_set_text(objects.lbl_ps2, "");
+          lv_label_set_text_static(objects.lbl_ps1, "Value Sent to Prog Track");
+          lv_label_set_text_static(objects.lbl_ps2, "");
 //          Serial.println("<W " + String(lv_textarea_get_text(objects.ta_cvn)) + " " + String(lv_textarea_get_text(objects.ta_cvv)) + ">");
           client.print("<W " + String(lv_textarea_get_text(objects.ta_cvn)) + " " + String(lv_textarea_get_text(objects.ta_cvv)) + ">");
         }else
         {
-          lv_label_set_text(objects.lbl_ps1, "Main or Prog MUST be selected");
+          lv_label_set_text_static(objects.lbl_ps1, "Main or Prog MUST be selected");
         }
       }else
       {
-        lv_label_set_text(objects.lbl_ps1, "Both CV and Value required!");
-        lv_label_set_text(objects.lbl_ps2, "");
+        lv_label_set_text_static(objects.lbl_ps1, "Both CV and Value required!");
+        lv_label_set_text_static(objects.lbl_ps2, "");
       }
       lv_obj_clear_state(objects.btn_write, LV_STATE_CHECKED);
       break;

@@ -38,7 +38,7 @@ void action_scan_button(lv_event_t * e)
         int n = WiFi.scanNetworks();
 //        Serial.print("Networks Found: ");
 //        Serial.println(n);
-        lv_label_set_text(objects.txt_scan_status, "Select Desired SSID");
+        lv_label_set_text_static(objects.txt_scan_status, "Select Desired SSID");
         delay(10);
         for (int i = 0; i < n; ++i) 
         {
@@ -52,7 +52,7 @@ void action_scan_button(lv_event_t * e)
       break;
     }
     case 2:
-      lv_label_set_text(objects.txt_scan_status, "Scanning...");
+      lv_label_set_text_static(objects.txt_scan_status, "Scanning...");
       break;
     case 30:       //Cancel
       loadScreen(SCREEN_ID_WI_FI);

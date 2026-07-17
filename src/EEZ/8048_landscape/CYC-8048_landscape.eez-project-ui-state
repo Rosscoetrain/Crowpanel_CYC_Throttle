@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/14",
+    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/13",
     "selectedActionObject": "[CYC-8048_landscape.eez-project]:/actions/23",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -197,16 +197,15 @@
                 {
                   "type": "tab",
                   "id": "#e5705479-239e-4456-983d-50fd172f449a",
-                  "name": "Turnouts",
+                  "name": "Routes",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/14",
+                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/13",
                     "permanent": false
                   },
                   "icon": "svg:page"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -226,7 +225,8 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -1550,7 +1550,8 @@
     "[CYC-8048_landscape.eez-project]:/userPages/1[flow-state]": {
       "selection": {
         "0": {
-          "2": {
+          "2": {},
+          "9": {
             "$selected": true
           }
         }
@@ -1857,7 +1858,9 @@
         "0": {
           "0": {},
           "1": {},
-          "3": {},
+          "3": {
+            "$selected": true
+          },
           "7": {}
         }
       },
@@ -1880,11 +1883,11 @@
         "0": {
           "0": {},
           "1": {},
-          "3": {},
-          "7": {},
-          "8": {
+          "3": {
             "$selected": true
-          }
+          },
+          "7": {},
+          "8": {}
         }
       },
       "transform": {

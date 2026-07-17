@@ -88,11 +88,11 @@ void action_wifi_button(lv_event_t * e)
       break;
     case 2:     //Scan
       loadScreen(SCREEN_ID_SCAN);
-      lv_label_set_text(objects.txt_scan_status, "Press Scan to Search");
+      lv_label_set_text_static(objects.txt_scan_status, "Press Scan to Search");
       break;
     case 7:     //Connect
     {
-      lv_label_set_text(objects.lbl_wifi_status, "Connecting to WiFi...");
+      lv_label_set_text_static(objects.lbl_wifi_status, "Connecting to WiFi...");
       WiFi.begin(lv_textarea_get_text(objects.ta_ssid), lv_textarea_get_text(objects.ta_password));
       int timeOut = timeout;
       while (WiFi.status() != WL_CONNECTED)
@@ -102,23 +102,23 @@ void action_wifi_button(lv_event_t * e)
         timeOut = timeOut -1;
         if(timeOut <0)
         {
-          lv_label_set_text(objects.lbl_wifi_status, "#FF0000 Timeout trying to Connect...");
+          lv_label_set_text_static(objects.lbl_wifi_status, "#FF0000 Timeout trying to Connect...");
           lv_img_set_src(objects.img_wifi, &img_x);
-          lv_label_set_text(objects.lbl_ps2,"");
+          lv_label_set_text_static(objects.lbl_ps2,"");
           break;
         }
       }
       if(WiFi.status() == WL_CONNECTED)
       {
-        lv_label_set_text(objects.lbl_wifi_status, "Connected to WiFi!");
-        lv_label_set_text(objects.lbl_wifi_status2, "Now connecting to DCCEX");
+        lv_label_set_text_static(objects.lbl_wifi_status, "Connected to WiFi!");
+        lv_label_set_text_static(objects.lbl_wifi_status2, "Now connecting to DCCEX");
         lv_img_set_src(objects.img_wifi, &img_6);
         if(!client.connect(lv_textarea_get_text(objects.ta_ip_address), atoi(lv_textarea_get_text(objects.ta_port))))
         {
-          lv_label_set_text(objects.lbl_wifi_status2, "Unable to Connect to DCCEX");
+          lv_label_set_text_static(objects.lbl_wifi_status2, "Unable to Connect to DCCEX");
         }else 
         {
-          lv_label_set_text(objects.lbl_wifi_status2, "Connected to DCCEX!");
+          lv_label_set_text_static(objects.lbl_wifi_status2, "Connected to DCCEX!");
           break;
         }
       }

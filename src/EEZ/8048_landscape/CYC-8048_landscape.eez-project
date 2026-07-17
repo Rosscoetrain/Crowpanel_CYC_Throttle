@@ -2554,6 +2554,7 @@
                 }
               ],
               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlag": true,
               "clickableFlagType": "literal",
@@ -3057,6 +3058,7 @@
               "heightUnit": "px",
               "children": [],
               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE|CHECKABLE",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlag": true,
               "clickableFlagType": "literal",
@@ -9636,11 +9638,13 @@
                 }
               ],
               "widgetFlags": "SCROLL_ON_FOCUS|SCROLL_WITH_ARROW",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlag": true,
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
               "flagScrollDirection": "",
+              "checkedState": false,
               "checkedStateType": "literal",
               "disabledState": true,
               "disabledStateType": "literal",
@@ -10495,11 +10499,13 @@
                 }
               ],
               "widgetFlags": "SCROLL_ON_FOCUS|SCROLL_WITH_ARROW",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlag": true,
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
               "flagScrollDirection": "",
+              "checkedState": false,
               "checkedStateType": "literal",
               "disabledState": true,
               "disabledStateType": "literal",
@@ -10702,7 +10708,7 @@
             {
               "objID": "5c7b5b51-324c-4ccc-8fcf-d4689ac3d2fd",
               "type": "LVGLKeyboardWidget",
-              "left": 86,
+              "left": 283,
               "top": 160,
               "width": 479,
               "height": 309,
@@ -10752,7 +10758,7 @@
             {
               "objID": "e94cc2a2-35b4-46f2-d88e-4181a4a412d5",
               "type": "LVGLKeyboardWidget",
-              "left": 86,
+              "left": 282,
               "top": 160,
               "width": 480,
               "height": 309,
@@ -11414,7 +11420,15 @@
             "childStyles": []
           },
           "timeline": [],
-          "eventHandlers": [],
+          "eventHandlers": [
+            {
+              "objID": "df3a87c0-e8aa-416a-b7ab-7c2489dba20f",
+              "eventName": "SCREEN_LOADED",
+              "handlerType": "action",
+              "action": "screenLoadCB",
+              "userData": 10
+            }
+          ],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "px",
@@ -12575,8 +12589,8 @@
             {
               "objID": "b6f445df-7e27-421e-ae2a-79c06ea3b89a",
               "type": "LVGLLabelWidget",
-              "left": 479,
-              "top": 421,
+              "left": 480,
+              "top": 340,
               "width": 310,
               "height": 27,
               "customInputs": [],
@@ -14835,12 +14849,12 @@
                       "pad_right": 5,
                       "pad_row": 5,
                       "pad_column": 5,
-                      "text_font": "MONTSERRAT_14"
+                      "text_font": "MONTSERRAT_20"
                     }
                   },
                   "MAIN": {
                     "DEFAULT": {
-                      "text_font": "MONTSERRAT_14"
+                      "text_font": "MONTSERRAT_20"
                     }
                   }
                 }
@@ -15103,7 +15117,7 @@
               "left": 180,
               "top": 106,
               "width": 364,
-              "height": 18,
+              "height": 22,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -15131,7 +15145,14 @@
               "disabledStateType": "literal",
               "states": "",
               "localStyles": {
-                "objID": "443cc07e-f842-4845-a59c-04562817daaa"
+                "objID": "443cc07e-f842-4845-a59c-04562817daaa",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_20"
+                    }
+                  }
+                }
               },
               "group": "",
               "groupIndex": 0,
@@ -15551,12 +15572,12 @@
                       "pad_right": 5,
                       "pad_row": 5,
                       "pad_column": 5,
-                      "text_font": "MONTSERRAT_14"
+                      "text_font": "MONTSERRAT_20"
                     }
                   },
                   "MAIN": {
                     "DEFAULT": {
-                      "text_font": "MONTSERRAT_14"
+                      "text_font": "MONTSERRAT_20"
                     }
                   }
                 }
@@ -15712,7 +15733,7 @@
               "eventHandlers": [
                 {
                   "objID": "a431e9c6-a25f-4cbb-abbb-752f75ac0c90",
-                  "eventName": "RELEASED",
+                  "eventName": "CLICKED",
                   "handlerType": "action",
                   "action": "pointsButton",
                   "userData": 31
@@ -15819,7 +15840,7 @@
               "left": 180,
               "top": 106,
               "width": 459,
-              "height": 18,
+              "height": 22,
               "customInputs": [],
               "customOutputs": [],
               "style": {
@@ -15847,7 +15868,14 @@
               "disabledStateType": "literal",
               "states": "",
               "localStyles": {
-                "objID": "52452a3b-3d07-48e2-c3cd-dc7dd1b94cac"
+                "objID": "52452a3b-3d07-48e2-c3cd-dc7dd1b94cac",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_20"
+                    }
+                  }
+                }
               },
               "group": "",
               "groupIndex": 0,
