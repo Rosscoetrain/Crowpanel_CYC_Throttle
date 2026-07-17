@@ -44,16 +44,15 @@
 
 #include <WiFi.h>
 
-#include <DCCEXProtocol.h>
-#include "dccExProtocolDelegate.h"
-
-
 /*
  * This #ifdef EEZ is only here to provide a means to compile a test program using the standard SquareLine Studio files.
  *
  */
 
 #ifdef EEZ
+
+#include <DCCEXProtocol.h>
+#include "dccExProtocolDelegate.h"
 
 #include <CSV_Parser.h>
 #include "FS.h"
@@ -159,6 +158,8 @@ void setup()
 
   pinMode(19, OUTPUT);//uart1
 
+  Serial.println("Setup wire");
+
   Wire.begin(15, 16);
   delay(100);
 
@@ -251,6 +252,7 @@ void setup()
   Serial.println("Connected to the server");
 */
 
+#ifdef EEZ
   // Enable logging on Serial
   dccexProtocol.setLogStream(&Serial);
   dccexProtocol.enableHeartbeat();
@@ -259,6 +261,11 @@ void setup()
   dccexProtocol.setDelegate(&myDelegate);
 
   dccexProtocol.connect(&client);
+#endif
+
+#if defined(ESP32DIS02170A_LS) || defined(ESP32DIS02170A_) 
+  beep(2000);
+#endif
 
   Serial.println( "Setup done" );
 }
@@ -266,6 +273,8 @@ void setup()
 void loop()
 {
   lv_timer_handler(); /* let the GUI do its work */
+#ifdef EEZ
   dccexProtocol.check();
-  delay(10);
+#endif
+  delay(50);
 }

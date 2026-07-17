@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/13",
+    "selectedUserPageObject": "[CYC-8048_landscape.eez-project]:/userPages/0",
     "selectedActionObject": "[CYC-8048_landscape.eez-project]:/actions/23",
     "subnavigationSelectedItems": {
       "variables-tab/sub-navigation/selected-item": "Global"
@@ -197,15 +197,16 @@
                 {
                   "type": "tab",
                   "id": "#e5705479-239e-4456-983d-50fd172f449a",
-                  "name": "Routes",
+                  "name": "Main",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/13",
+                    "objectPath": "[CYC-8048_landscape.eez-project]:/userPages/0",
                     "permanent": false
                   },
                   "icon": "svg:page"
                 }
-              ]
+              ],
+              "active": true
             },
             {
               "type": "row",
@@ -225,8 +226,7 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ],
-                  "active": true
+                  ]
                 },
                 {
                   "type": "tabset",
@@ -1551,7 +1551,8 @@
       "selection": {
         "0": {
           "2": {},
-          "9": {
+          "9": {},
+          "12": {
             "$selected": true
           }
         }
@@ -1573,20 +1574,16 @@
     "[CYC-8048_landscape.eez-project]:/userPages/0[flow-state]": {
       "selection": {
         "0": {
-          "5": {
-            "$selected": true
-          },
-          "6": {
-            "$selected": true
-          },
+          "5": {},
+          "6": {},
           "10": {},
           "13": {}
         }
       },
       "transform": {
         "translate": {
-          "x": -506.15625,
-          "y": -259.484375
+          "x": -378.15625,
+          "y": -224.484375
         },
         "scale": 1
       },
@@ -1697,13 +1694,16 @@
     "[CYC-8048_landscape.eez-project]:/userPages/7[flow-state]": {
       "selection": {
         "0": {
-          "2": {},
           "6": {},
-          "9": {},
           "10": {},
-          "11": {},
           "12": {},
-          "14": {}
+          "14": {},
+          "16": {
+            "$selected": true
+          },
+          "17": {
+            "$selected": true
+          }
         }
       },
       "transform": {
@@ -1724,12 +1724,8 @@
       "selection": {
         "0": {
           "1": {},
-          "2": {
-            "$selected": true
-          },
-          "3": {
-            "$selected": true
-          }
+          "2": {},
+          "3": {}
         }
       },
       "transform": {
@@ -1749,9 +1745,7 @@
     "[CYC-8048_landscape.eez-project]:/userPages/9[flow-state]": {
       "selection": {
         "0": {
-          "1": {
-            "$selected": true
-          }
+          "1": {}
         }
       },
       "transform": {
@@ -1858,10 +1852,11 @@
         "0": {
           "0": {},
           "1": {},
-          "3": {
+          "3": {},
+          "7": {},
+          "8": {
             "$selected": true
-          },
-          "7": {}
+          }
         }
       },
       "transform": {
@@ -1883,11 +1878,11 @@
         "0": {
           "0": {},
           "1": {},
-          "3": {
-            "$selected": true
-          },
+          "3": {},
           "7": {},
-          "8": {}
+          "8": {
+            "$selected": true
+          }
         }
       },
       "transform": {
@@ -1921,7 +1916,8 @@
   "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [
     "MISCELLANEOUS",
-    "TEXT"
+    "TEXT",
+    "BACKGROUND"
   ],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,

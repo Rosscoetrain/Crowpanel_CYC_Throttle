@@ -184,9 +184,10 @@ void setBacklight(uint8_t brightness)
 bool i2cScanForAddress(uint8_t address)
 {
   Wire.beginTransmission(address);
-//  byte error = Wire.endTransmission();
-//  Serial.print("Wire end = ");Serial.println(error);
-  return (Wire.endTransmission() == 0);
+  byte error = Wire.endTransmission();
+  Serial.print("Wire end = ");Serial.println(error);
+  return error;
+//  return (Wire.endTransmission() == 0);
 }
 
 

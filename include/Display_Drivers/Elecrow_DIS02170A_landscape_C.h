@@ -207,5 +207,21 @@ void init_Hardware()
 
  }
 
+void beep(uint16_t duration)
+ {
+  Wire.beginTransmission(0x30);
+  Wire.write(0x15);
+//  error = Wire.endTransmission();
+  Wire.endTransmission();
+  delay(duration);
+  Wire.beginTransmission(0x30);
+  Wire.write(0x16);
+//  error = Wire.endTransmission();
+  Wire.endTransmission();
+ }
+
+
+
+
  #endif // ESP32_DIS02170A_LANDSCAPE_C_H
  
